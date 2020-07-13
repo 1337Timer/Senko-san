@@ -3,9 +3,9 @@ const fetch = require("node-fetch")
 const { MESSAGES } = require("../../util/constants");
 
 module.exports.run = async (client, message, args) => {
-    const fox = await fetch('http://randomfox.ca/floof/')
+    const fox = await fetch('https://some-random-api.ml/img/fox')
     .then(res => res.json())
-    .then(json => json.image);
+    .then(json => json.link);
 
     const embed = new MessageEmbed()
     .setImage(fox)
