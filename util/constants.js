@@ -108,6 +108,18 @@ const MESSAGES = {
                 args: true
             },
 
+            ACTIVITY: {
+                name: 'activity',
+                aliases: ['activity'],
+                category:'autre',
+                description: 'Envoie des informations concernant l\'activité du serveur',
+                cooldown: 0,
+                usage:'',
+                isUserAdmin: false,
+                permissions: false,
+                args: false
+            },
+
             AVATAR: {
                 name: 'avatar',
                 aliases: ['avatar'],
