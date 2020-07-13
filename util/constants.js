@@ -48,53 +48,6 @@ const MESSAGES = {
             }
         },
 
-        IMAGES: {
-            CAT: {
-                name: 'cat',
-                aliases: ['cat', 'chat'],
-                category:'Images',
-                description: 'Renvoie des images de chat',
-                cooldown: 0,
-                usage:'',
-                isUserAdmin: false,
-                permissions: false,
-                args: false
-            },
-
-            DOG: {
-                name: 'dog',
-                aliases: ['dog', 'chien'],
-                category:'Images',
-                description: 'Renvoie des images de chien',
-                cooldown: 0,
-                usage:'',
-                isUserAdmin: false,
-                permissions: false,
-                args: false
-            },
-            FOX: {
-                name: 'fox',
-                aliases: ['fox', 'renard'],
-                category:'Images',
-                description: 'Renvoie des images de renard',
-                cooldown: 0,
-                usage:'',
-                isUserAdmin: false,
-                permissions: false,
-                args: false
-            },
-            MEME: {
-                name: 'meme',
-                aliases: ['meme'],
-                category:'Images',
-                description: 'Renvoie des memes',
-                cooldown: 0,
-                usage:'',
-                isUserAdmin: false,
-                permissions: false,
-                args: false
-            }
-        },
         AUTRE: {   
             EIGHTBALL: {
                 name: '8ball',
@@ -178,6 +131,54 @@ const MESSAGES = {
                 isUserAdmin: false,
                 permissions: false,
                 args: true
+            },
+
+            IMAGES: {
+                CAT: {
+                    name: 'cat',
+                    aliases: ['cat', 'chat'],
+                    category:'images',
+                    description: 'Renvoie des images de chat',
+                    cooldown: 0,
+                    usage:'',
+                    isUserAdmin: false,
+                    permissions: false,
+                    args: false
+                },
+    
+                DOG: {
+                    name: 'dog',
+                    aliases: ['dog', 'chien'],
+                    category:'images',
+                    description: 'Renvoie des images de chien',
+                    cooldown: 0,
+                    usage:'',
+                    isUserAdmin: false,
+                    permissions: false,
+                    args: false
+                },
+                FOX: {
+                    name: 'fox',
+                    aliases: ['fox', 'renard'],
+                    category:'images',
+                    description: 'Renvoie des images de renard',
+                    cooldown: 0,
+                    usage:'',
+                    isUserAdmin: false,
+                    permissions: false,
+                    args: false
+                },
+                MEME: {
+                    name: 'meme',
+                    aliases: ['meme'],
+                    category:'images',
+                    description: 'Renvoie des memes',
+                    cooldown: 0,
+                    usage:'',
+                    isUserAdmin: false,
+                    permissions: false,
+                    args: false
+                }
             },
 
             SERVERINFO: {
