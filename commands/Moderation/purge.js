@@ -11,7 +11,7 @@ module.exports.run = async (client, message, args) => {
     message.delete();
     await message.channel.bulkDelete(messages);
 
-    message.channel.send(`${messages} supprimés ! <:SenkoHappy:732191612326903808>`).then(msg => {msg.delete({ timeout: 4000 })})
+    message.channel.send(`Messages supprimés <:SenkoHappy:732191612326903808>`).then(msg => {msg.delete({ timeout: 4000 })})
 };
 
 module.exports.help = MESSAGES.COMMANDS.MODERATION.PURGE;
