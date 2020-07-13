@@ -22,7 +22,7 @@ module.exports.run = (client, message, args) => {
     message.channel.send(embed).then(async msg => {
         await msg.react(r6Emoji);
         await msg.react(gtaEmoji);
-        msg => {msg.delete({ timeout: 15000 })}
+        await msg.delete({ timeout: 15000 })
     })
 
     message.delete();
