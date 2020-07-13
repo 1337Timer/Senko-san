@@ -48,7 +48,7 @@ const MESSAGES = {
             }
         },
 
-        Images: {
+        IMAGES: {
             CAT: {
                 name: 'cat',
                 aliases: ['cat', 'chat'],
