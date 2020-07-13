@@ -233,7 +233,7 @@ const MESSAGES = {
         },
 
         REACTIONS: {
-            ALLROLES: {
+            JEUX: {
                 name: 'jeux',
                 aliases: ['jeux'],
                 category:'reactions',
