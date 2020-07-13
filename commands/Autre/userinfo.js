@@ -9,7 +9,7 @@ module.exports.run = (client, message, args) => {
    
    const embed = new MessageEmbed()
    .setColor(message.member.displayHexColor)
-   .setThumbnail(user.displayAvatarURL())
+   .setThumbnail(user.displayAvatarURL({ format: 'png', dynamic: true}))
    .setTitle(`${user.username}`)
    .addField(`<:Membres:731206879732301984> Nom :`, `${user.tag}`)
    .addField(`<:Temps:731207221190328372> Créé le :`, `${moment(user.createdAt).format('DD/MM/YYYY')}`)

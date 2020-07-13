@@ -4,7 +4,7 @@ const { MESSAGES } = require("../../util/constants");
 module.exports.run = async (client, message, args) => {   
         
 const embed = new MessageEmbed()
-.setAuthor(message.author.username, message.author.displayAvatarURL())
+.setAuthor(message.author.username, message.author.displayAvatarURL({ format: 'png', dynamic: true}))
 .setColor('#F4AE42')
 .setDescription(args.join(" "))
 .setTimestamp()

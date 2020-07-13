@@ -1,5 +1,53 @@
 const MESSAGES = {
     COMMANDS: {
+        ACTIONS: {
+            HUG: {
+                name: 'hug',
+                aliases: ['hug'],
+                category:'actions',
+                description: 'Donne un calin à la personne mentionnée',
+                cooldown: 0,
+                usage:'<mention>',
+                isUserAdmin: false,
+                permissions: false,
+                args: true
+            },
+
+            KILL: {
+                name: 'kill',
+                aliases: ['kill'],
+                category:'actions',
+                description: 'Tue la personne mentionnée',
+                cooldown: 0,
+                usage:'<mention>',
+                isUserAdmin: false,
+                permissions: false,
+                args: true
+            },
+            KISS: {
+                name: 'kiss',
+                aliases: ['kiss'],
+                category:'actions',
+                description: 'Embrasse la personne mentionnée',
+                cooldown: 0,
+                usage:'<mention>',
+                isUserAdmin: false,
+                permissions: false,
+                args: true
+            },
+            PAT: {
+                name: 'pat',
+                aliases: ['pat'],
+                category:'actions',
+                description: 'Tapote la personne mentionnée',
+                cooldown: 0,
+                usage:'<mention>',
+                isUserAdmin: false,
+                permissions: false,
+                args: true
+            }
+        },
+
         ANIMAUX: {
             CAT: {
                 name: 'cat',
@@ -26,7 +74,7 @@ const MESSAGES = {
             },
             FOX: {
                 name: 'fox',
-                aliases: ['fox', 'chien'],
+                aliases: ['fox', 'renard'],
                 category:'animaux',
                 description: 'Renvoie des images de renard',
                 cooldown: 0,

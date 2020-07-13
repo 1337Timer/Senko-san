@@ -10,8 +10,8 @@ module.exports.run = async (client, message, args) => {
     if(!raison) return message.reply("<:SenkoThinking:732192434137727057> Indiquez une raison")
 
     const embed = new MessageEmbed()
-    .setAuthor(message.author.tag, message.author.displayAvatarURL())
-    .setThumbnail(user.displayAvatarURL())
+    .setAuthor(message.author.tag, message.author.displayAvatarURL({ format: 'png', dynamic: true}))
+    .setThumbnail(user.displayAvatarURL({ format: 'png', dynamic: true}))
     .addFields(
         { name: "<:IconJoin:731919767425777806> Coupable", value: user.username, inline: true },
         { name: "🔗 Lien du message", value: isFirstCharNumeric(raison.charAt(0)) ? `[Clique ici](https://discordapp.com/channels/${message.guild.id}/${message.channel.id}/${args[1]})` : 'Aucun lien précisé', inline: true},
