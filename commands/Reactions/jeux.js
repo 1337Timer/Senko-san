@@ -19,12 +19,13 @@ module.exports.run = (client, message, args) => {
         `
     );
 
-    client.channels.cache.get('709599127012638770').send(embed).then(async msg => {
+    message.channel.send(embed).then(async msg => {
         await msg.react(r6Emoji);
         await msg.react(gtaEmoji);
+        msg => {msg.delete({ timeout: 15000 })}
     })
 
     message.delete();
 };
 
-module.exports.help = MESSAGES.COMMANDS.REACTIONS.ALLROLES;
+module.exports.help = MESSAGES.COMMANDS.REACTIONS.JEUX;

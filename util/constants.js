@@ -146,31 +146,6 @@ const MESSAGES = {
             }
             
         },
-        COLLECTORS: {
-            MSGCOLLECTOR: {
-                name: 'msgcollector',
-                aliases: ['msgcollector', 'mcol'],
-                category:'collectors',
-                description: 'Message collector',
-                cooldown: 0,
-                usage:'<message>',
-                isUserAdmin: false,
-                permissions: true,
-                args: true
-            },
-
-            REACTCOLLECTOR: {
-                name: 'reactcollector',
-                aliases: ['reactcollector', 'rcol'],
-                category:'collectors',
-                description: 'React collector',
-                cooldown: 0,
-                usage:'',
-                isUserAdmin: false,
-                permissions: true,
-                args: false
-            }
-        },
 
         MODERATION: {
             BAN : {
@@ -272,22 +247,10 @@ const MESSAGES = {
 
         REACTIONS: {
             ALLROLES: {
-                name: 'allroles',
-                aliases: ['allroles'],
+                name: 'jeux',
+                aliases: ['jeux'],
                 category:'reactions',
                 description: 'Envoie un message avec des réactions.',
-                cooldown: 0,
-                usage:'',
-                isUserAdmin: false,
-                permissions: false,
-                args: false
-            },
-
-            EMOJI: {
-                name: 'emoji',
-                aliases: ['emoji'],
-                category:'reactions',
-                description: 'Envoie des émojis sur notre message.',
                 cooldown: 0,
                 usage:'',
                 isUserAdmin: false,

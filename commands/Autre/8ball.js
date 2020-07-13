@@ -1,12 +1,12 @@
 const { MESSAGES } = require("../../util/constants");
 
 module.exports.run = (client, message, args) => {
-        const replies = ["<:peepoYes:731905323920523344> Oui", "<:peepoNo:731905309861347389> Non", "<a:ablobshrug:731904826874789930> Peut-être", "<a:TakagiShhh:714900433654513726> Ne le dites à personne, mais oui", "Pas aujourd'hui", "Seulement aujourd'hui"];
+        const replies = ["<:SenkoHappy:732191612326903808> Oui", "<:SenkoHands:732192810505339001> Non", "<:SenkoThinking:732192434137727057> Peut-être", "<a:TakagiShhh:714900433654513726> Ne le dites à personne, mais oui", "<a:TakagiShhh:714900433654513726> Ne le dites à personne, mais non", "Pas aujourd'hui", "Seulement aujourd'hui"];
         const question = args.join(" ");
         const response = Math.floor(Math.random() * replies.length);
 
         
-        message.channel.send(`**<:E_MonkaHmmm:731919634936234066> Question :** ${question}\n **<:IconJoin:731919767425777806> Réponse :** ${replies[response]}`);
+        message.channel.send(`**<:SenkoThinking:732192434137727057> Question :** ${question}\n **<:IconJoin:731919767425777806> Réponse :** ${replies[response]}`);
         message.delete();
 };
 

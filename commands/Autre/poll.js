@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
         
 const embed = new MessageEmbed()
 .setAuthor(message.author.username, message.author.displayAvatarURL())
-.setColor('#FF0051')
+.setColor('#F4AE42')
 .setDescription(args.join(" "))
 .setTimestamp()
 

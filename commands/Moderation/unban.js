@@ -3,17 +3,17 @@ const { MESSAGES } = require("../../util/constants");
 
 module.exports.run = async (client, message, args) => {
     const user = await client.users.fetch(args[0]);
-    if(!user) return message.reply("L'utilisateur n'existe pas.");
+    if(!user) return message.reply("<:SenkoThinking:732192434137727057> L'utilisateur n'existe pas.");
     message.guild.members.unban(user);
 
     const embed = new MessageEmbed()
         .setAuthor(`${user.username} (${user.id})`, user.avatarURL())
         .setColor("#F05959")
-        .setDescription(`**Action**: unban`)
+        .setDescription(`**<:IconJoin:731919767425777806>Action**: Unban`)
         .setTimestamp()
         .setFooter(message.author.username, message.author.avatarURL());
 
-    client.channels.cache.get('729389432612061316').send(embed);
+    client.channels.cache.get('699452457104834580').send(embed);
 };
 
 module.exports.help = MESSAGES.COMMANDS.MODERATION.UNBAN;

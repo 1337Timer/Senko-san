@@ -5,8 +5,8 @@ module.exports = (client, member) => {
     const embed = new MessageEmbed()
     .setAuthor(`${member.displayName} (${member.id})`, member.user.displayAvatarURL())
     .setColor('#F05959')
-    .setFooter("Un utilisateur est parti")
+    .setFooter("<:IconLeave:732205158389514272> Un utilisateur est parti")
     .setTimestamp();
     
-    client.channels.cache.get('729389432612061316').send(embed);
+    client.channels.cache.get('699450511400763423').send(embed);
 }
