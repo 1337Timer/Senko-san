@@ -14,7 +14,7 @@ module.exports = async (client, member) => {
     let embed2 = new MessageEmbed()
     .setAuthor(`${member.displayName} (${member.id})`, member.user.displayAvatarURL({ format: 'png', dynamic: true}))
     .setColor('#2ECC71')
-    .setFooter("<:IconJoin:731919767425777806> Un utilisateur a rejoint")
+    .setFooter("Un utilisateur a rejoint")
     .setTimestamp();
     
     client.channels.cache.get('699450511400763423').send(embed2);
