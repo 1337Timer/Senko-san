@@ -1,18 +1,5 @@
 const MESSAGES = {
     COMMANDS: {
-        ADMIN: {
-            RELOAD: {
-                name: 'reload',
-                aliases: ['restart'],
-                category:'admin',
-                description: 'Relance le bot',
-                cooldown: 0,
-                usage:'',
-                isUserAdmin: false,
-                permissions: true,
-                args: false
-            }
-        },
         ANIMAUX: {
             CAT: {
                 name: 'cat',
