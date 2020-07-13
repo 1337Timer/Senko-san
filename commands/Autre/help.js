@@ -11,7 +11,7 @@ module.exports.run = (client, message, args) => {
     if (!args.length) {
         const embed = new MessageEmbed()
         .setColor("#F4AE42")
-        .addField("<a:senkoEars:732199112820260875> Liste des mes commandes", `Pour plus d'informations sur une commande, tapez \`${PREFIX}help <commande>\``)
+        .addField("<a:senkoEars:732199112820260875> Liste de mes commandes", `Pour plus d'informations sur une commande, tapez \`${PREFIX}help <commande>\``)
 
         for (const category of categoryList) {
             embed.addField(
