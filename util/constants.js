@@ -48,11 +48,11 @@ const MESSAGES = {
             }
         },
 
-        ANIMAUX: {
+        Images: {
             CAT: {
                 name: 'cat',
                 aliases: ['cat', 'chat'],
-                category:'animaux',
+                category:'Images',
                 description: 'Renvoie des images de chat',
                 cooldown: 0,
                 usage:'',
@@ -64,7 +64,7 @@ const MESSAGES = {
             DOG: {
                 name: 'dog',
                 aliases: ['dog', 'chien'],
-                category:'animaux',
+                category:'Images',
                 description: 'Renvoie des images de chien',
                 cooldown: 0,
                 usage:'',
@@ -75,7 +75,7 @@ const MESSAGES = {
             FOX: {
                 name: 'fox',
                 aliases: ['fox', 'renard'],
-                category:'animaux',
+                category:'Images',
                 description: 'Renvoie des images de renard',
                 cooldown: 0,
                 usage:'',
@@ -86,7 +86,7 @@ const MESSAGES = {
             MEME: {
                 name: 'meme',
                 aliases: ['meme'],
-                category:'animaux',
+                category:'Images',
                 description: 'Renvoie des memes',
                 cooldown: 0,
                 usage:'',

@@ -16,4 +16,4 @@ message.channel.send(embed);
     message.delete();
 };
 
-module.exports.help = MESSAGES.COMMANDS.ANIMAUX.FOX;
+module.exports.help = MESSAGES.COMMANDS.IMAGES.FOX;

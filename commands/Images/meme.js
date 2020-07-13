@@ -19,4 +19,4 @@ message.channel.send(embed);
     message.delete();
 };
 
-module.exports.help = MESSAGES.COMMANDS.ANIMAUX.MEME;
+module.exports.help = MESSAGES.COMMANDS.IMAGES.MEME;

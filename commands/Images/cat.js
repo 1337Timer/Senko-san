@@ -3,17 +3,17 @@ const fetch = require("node-fetch")
 const { MESSAGES } = require("../../util/constants");
 
 module.exports.run = async (client, message, args) => {
-    const dog = await fetch('https://dog.ceo/api/breeds/image/random')
+    const cat = await fetch('http://aws.random.cat/meow')
     .then(res => res.json())
-    .then(json => json.message);
+    .then(json => json.file);
 
     const embed = new MessageEmbed()
-    .setImage(dog)
-    .setColor('7FE88D')
+    .setImage(cat)
+    .setColor("#FCCF95")
     
 message.channel.send(embed);
 
     message.delete();
 };
 
-module.exports.help = MESSAGES.COMMANDS.ANIMAUX.DOG;
+module.exports.help = MESSAGES.COMMANDS.IMAGES.CAT;
