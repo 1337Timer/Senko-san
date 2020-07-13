@@ -16,5 +16,17 @@ module.exports.run = (client, message, args) => {
 
     client.channels.cache.get('699452457104834580').send(embed);
     };
-    
+
+module.exports.help = {
+    name: 'kick',
+    aliases: ['k'],
+    category:'moderation',
+    description: 'Expulse un utilisateur',
+    cooldown: 0,
+    usage:'<mention> <raison>',
+    isUserAdmin: true,
+    permissions: true,
+    args: true
+};
+
 module.exports.help = MESSAGES.COMMANDS.MODERATION.KICK;
