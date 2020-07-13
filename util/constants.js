@@ -107,6 +107,18 @@ const MESSAGES = {
                 permissions: false,
                 args: true
             },
+
+            AVATAR: {
+                name: 'avatar',
+                aliases: ['avatar'],
+                category:'autre',
+                description: 'Renvoie l\'avatar d\'un utilisateur',
+                cooldown: 0,
+                usage:'<mention>',
+                isUserAdmin: false,
+                permissions: false,
+                args: false
+            },
             
             ECHO: {
                 name: 'echo',

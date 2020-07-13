@@ -22,7 +22,6 @@ module.exports.run = (client, message, args) => {
             .setAuthor(`${message.author.username} a fait un calin à ${user.username}`, message.author.displayAvatarURL({ format: 'png', dynamic: true}))
             .setColor(0x00C106)
             .setImage(rando_imgs[Math.floor(Math.random() * rando_imgs.length)])
-            .setFooter("<a:SenkoExcited:732258990754627634>")
             message.channel.send(embed);
     } 
 }

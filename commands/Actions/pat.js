@@ -15,7 +15,7 @@ module.exports.run = (client, message, args) => {
             ]
 
             const embed = new MessageEmbed()
-            .setAuthor(`${message.author.username} a tapoté ${user.username} <a:SenkoCatPat:732263261034119181>`, message.author.displayAvatarURL({ format: 'png', dynamic: true}))
+            .setAuthor(`${message.author.username} a tapoté ${user.username}`, message.author.displayAvatarURL({ format: 'png', dynamic: true}))
             .setColor(0x2E71CC)
             .setImage(rando_imgs[Math.floor(Math.random() * rando_imgs.length)])
             message.channel.send(embed);
