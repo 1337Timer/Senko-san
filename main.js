@@ -1,5 +1,5 @@
 const { Client, Collection } = require('discord.js');
-const { prefix } = "!";
+const { prefix } = "p!";
 const { loadCommands, loadEvents } = require("./util/loader");
 
 const client = new Client({ partials: ['MESSAGE', 'CHANNEL', 'REACTION'] });;
