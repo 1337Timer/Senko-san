@@ -1,5 +1,5 @@
 const { Client, Collection } = require('discord.js');
-const { prefix } = process.env.prefix;
+const { TOKEN } = require("./config");
 const { loadCommands, loadEvents } = require("./util/loader");
 
 const client = new Client({ partials: ['MESSAGE', 'CHANNEL', 'REACTION'] });;
@@ -8,4 +8,4 @@ const client = new Client({ partials: ['MESSAGE', 'CHANNEL', 'REACTION'] });;
 loadCommands(client);
 loadEvents(client);
 
-client.login(process.env.token);
+client.login(TOKEN);

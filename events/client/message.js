@@ -1,10 +1,10 @@
 const { Collection } = require('discord.js');
-const { prefix } = require('../../main');
+const { PREFIX } = require('../../config');
 
 module.exports = async (client, message) => {
-  if(!message.content.startsWith(prefix) || message.author.bot) return;
+  if(!message.content.startsWith(PREFIX) || message.author.bot) return;
   
-  const args = message.content.slice(prefix.length).split(/ +/);
+  const args = message.content.slice(PREFIX.length).split(/ +/);
   const commandName = args.shift().toLowerCase();
   const user = message.mentions.users.first();
 
@@ -16,7 +16,7 @@ module.exports = async (client, message) => {
   if (command.help.args && !args.length) {
       let noArgsReply = `<:SenkoThinking:732192434137727057> Cette commande nécessite des arguments !`;
 
-      if(command.help.usage) noArgsReply += `\n <:IconJoin:731919767425777806> Voici comment utiliser cette commande : \`${prefix}${command.help.name} ${command.help.usage}\``;
+      if(command.help.usage) noArgsReply += `\n <:IconJoin:731919767425777806> Voici comment utiliser cette commande : \`${PREFIX}${command.help.name} ${command.help.usage}\``;
 
       return message.channel.send(noArgsReply);
     };
