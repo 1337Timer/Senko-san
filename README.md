@@ -6,7 +6,7 @@ Un bot développé pour le <a href="https://discord.gg/MyG9Pxx">Discord</a> de l
 ## Utilisation
 
 ```
-Faites !help pour voir toutes les commandes disponibles et leur utilisation.
+Faites s!help pour voir toutes les commandes disponibles et leur utilisation.
 ```
 
 ## Features
