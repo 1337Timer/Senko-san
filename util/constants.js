@@ -138,7 +138,19 @@ const MESSAGES = {
                 aliases: ['si'],
                 category:'autre',
                 description: 'Envoie des informations concernant le serveur',
-                cooldown: 0,
+                cooldown: 5,
+                usage:'',
+                isUserAdmin: false,
+                permissions: false,
+                args: false
+            },
+
+            SING: {
+                name: 'sing',
+                aliases: ['sing'],
+                category:'autre',
+                description: 'Envoie une emote de Senko',
+                cooldown: 5,
                 usage:'',
                 isUserAdmin: false,
                 permissions: false,
