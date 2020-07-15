@@ -1,6 +1,30 @@
 const MESSAGES = {
     COMMANDS: {
         ACTIONS: {
+            CUDDLE: {
+                name: 'cuddle',
+                aliases: ['cuddle'],
+                category:'actions',
+                description: 'Caline à la personne mentionnée',
+                cooldown: 0,
+                usage:'<mention>',
+                isUserAdmin: false,
+                permissions: false,
+                args: true
+            },
+
+            HIGHFIVE: {
+                name: 'highfive',
+                aliases: ['highfive'],
+                category:'actions',
+                description: 'Fait un high-five avec la personne mentionnée',
+                cooldown: 0,
+                usage:'<mention>',
+                isUserAdmin: false,
+                permissions: false,
+                args: true
+            },
+
             HUG: {
                 name: 'hug',
                 aliases: ['hug'],
@@ -35,11 +59,44 @@ const MESSAGES = {
                 permissions: false,
                 args: true
             },
+            LICK: {
+                name: 'lick',
+                aliases: ['lick'],
+                category:'actions',
+                description: 'Lèche la personne mentionnée',
+                cooldown: 0,
+                usage:'<mention>',
+                isUserAdmin: false,
+                permissions: false,
+                args: true
+            },
+            NOM: {
+                name: 'nom',
+                aliases: ['nom'],
+                category:'actions',
+                description: 'Mordille la personne mentionnée',
+                cooldown: 0,
+                usage:'<mention>',
+                isUserAdmin: false,
+                permissions: false,
+                args: true
+            },
             PAT: {
                 name: 'pat',
                 aliases: ['pat'],
                 category:'actions',
                 description: 'Tapote la personne mentionnée',
+                cooldown: 0,
+                usage:'<mention>',
+                isUserAdmin: false,
+                permissions: false,
+                args: true
+            },
+            SLAP: {
+                name: 'slap',
+                aliases: ['slap'],
+                category:'actions',
+                description: 'Gifle la personne mentionnée',
                 cooldown: 0,
                 usage:'<mention>',
                 isUserAdmin: false,
