@@ -1,4 +1,4 @@
 module.exports = {
     TOKEN: process.env.token,
-    PREFIX: "!",
+    PREFIX: "s!",
 }
