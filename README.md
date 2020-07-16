@@ -14,6 +14,6 @@ Faites s!help pour voir toutes les commandes disponibles et leur utilisation.
 <li> Accueille les nouveaux membres sur le serveur et en MP.
 <li> Possède différentes commandes de modération/fun/utilitaire.
 <li> Possède une fonction "Reaction Role".
-<li> Qu'es-ce-qu'elle est choux quand-même :3
+<li> Qu'est-ce-qu'elle est choux quand-même :3
 <li> De nouvelles features arriveront au fur et à mesure.
 </ul>
