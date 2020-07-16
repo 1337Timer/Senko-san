@@ -20,7 +20,7 @@ module.exports.run = (client, message, args) => {
 
             const embed = new MessageEmbed()
             .setAuthor(`${message.author.username} a léché ${user.username}`, message.author.displayAvatarURL({ format: 'png', dynamic: true}))
-            .setColor(0x00C106)
+            .setColor('#F4AE42')
             .setImage(rando_imgs[Math.floor(Math.random() * rando_imgs.length)])
             message.channel.send(embed);
     } 
