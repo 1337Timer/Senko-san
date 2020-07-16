@@ -22,7 +22,7 @@ module.exports = async (client, member) => {
   }
 
   let embed2 = new MessageEmbed()
-    .setAuthor(`${member.displayName} (${member.id})`, member.user.displayAvatarURL({ format: 'png', dynamic: true}))
+    .setAuthor(`${member} (${member.id})`, member.user.displayAvatarURL({ format: 'png', dynamic: true}))
     .setColor('#2ECC71')
     .setFooter("Un utilisateur a rejoint")
     .setTimestamp();
