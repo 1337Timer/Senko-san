@@ -228,6 +228,81 @@ const MESSAGES = {
             
             },
 
+        COMPORTEMENT: {
+            BLUSH: {
+                name: 'blush',
+                aliases: ['blush'],
+                category:'comportement',
+                description: 'Renvoie un GIF d\'une personne qui rougit ',
+                cooldown: 0,
+                usage:'',
+                isUserAdmin: false,
+                permissions: false,
+                args: false
+              },
+    
+            CRY: {
+                name: 'cry',
+                aliases: ['cry'],
+                category:'comportement',
+                description: 'Renvoie un GIF d\'une personne qui pleure',
+                cooldown: 0,
+                usage:'',
+                isUserAdmin: false,
+                permissions: false,
+                args: false
+               },
+
+            POUT: {
+                name: 'pout',
+                aliases: ['pout'],
+                category:'comportement',
+                description: 'Renvoie une GIF d\'une personne gênée',
+                cooldown: 0,
+                usage:'',
+                isUserAdmin: false,
+                permissions: false,
+                args: false
+            },
+
+            SMILE: {
+                name: 'smile',
+                aliases: ['smile'],
+                category:'comportement',
+                description: 'Renvoie un GIF d\'une personne souriante',
+                cooldown: 0,
+                usage:'',
+                isUserAdmin: false,
+                permissions: false,
+                args: false              
+            },
+
+            SMUG: {
+                name: 'smug',
+                aliases: ['smug'],
+                category:'comportement',
+                description: 'Renvoie un GIF d\'une personne avec un regard arrogant',
+                cooldown: 0,
+                usage:'',
+                isUserAdmin: false,
+                permissions: false,
+                args: false              
+            },
+
+            THUMBSUP: {
+                name: 'thumbsup',
+                aliases: ['thumbsup'],
+                category:'comportement',
+                description: 'Renvoie un GIF d\'une personne avec le pouce levé' ,
+                cooldown: 0,
+                usage:'',
+                isUserAdmin: false,
+                permissions: false,
+                args: false              
+            }
+
+        },
+
         IMAGES: {
             CAT: {
                 name: 'cat',
