@@ -9,7 +9,7 @@ module.exports = async (client, member) => {
 
   let embed1 = new MessageEmbed()
     .setTitle(`Bienvenue dans ${member.guild.name}`)
-    .setColor(0x2ECC71)
+    .setColor('#F4AE42')
     .setDescription(`<a:Welcome1:719962451940212736><a:Welcome2:719962501948768337> Hey, je vous ai envoyé un MP contenant ce dont vous avez besoin pour intégrer la meute ! <a:SenkoWelcome:732194291606093897>`)
     .setThumbnail(member.user.displayAvatarURL({ format: 'png', dynamic: true}))
     .setFooter(`Nombre de membres : ${member.guild.memberCount}`);
