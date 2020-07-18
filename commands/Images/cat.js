@@ -3,9 +3,9 @@ const fetch = require("node-fetch")
 const { MESSAGES } = require("../../util/constants");
 
 module.exports.run = async (client, message, args) => {
-    const cat = await fetch('http://aws.random.cat/meow')
+    const cat = await fetch('https://api.thecatapi.com/v1/images/search')
     .then(res => res.json())
-    .then(json => json.file);
+    .then(json => json[0].url);
 
     const embed = new MessageEmbed()
     .setImage(cat)
