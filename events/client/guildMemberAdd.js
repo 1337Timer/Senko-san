@@ -11,18 +11,28 @@ module.exports = async (client, member) => {
 
   setInterval(() => {
     const userlist = newUsers.map(u => u.toString()).join(", ");
-      let embed1 = new MessageEmbed()
+      let newMember = new MessageEmbed()
         .setTitle(`Bienvenue dans ${member.guild.name}`)
         .setColor('#F4AE42')
-        .setDescription(`<a:Welcome1:719962451940212736><a:Welcome2:719962501948768337> Hey, je vous ai envoyé un MP contenant ce dont vous avez besoin pour intégrer la meute ! <a:SenkoWelcome:732194291606093897>`)
+        .setDescription(`<a:Welcome1:719962451940212736><a:Welcome2:719962501948768337> Hey, je t'ai envoyé un MP contenant ce dont tu as besoin pour intégrer la meute ! <a:SenkoWelcome:732194291606093897>`)
         .setThumbnail(member.user.displayAvatarURL({ format: 'png', dynamic: true}))
         .setFooter(`Nombre de membres : ${member.guild.memberCount}`);
-    newUsers.clear();
 
-    if(userlist) {
-      defaultChannel.send(`${userlist}`, embed1);
-    } else {
-      return;
+      let newMembers = new MessageEmbed()
+        .setTitle(`Bienvenue dans ${member.guild.name}`)
+        .setColor('#F4AE42')
+        .setDescription(`<a:Welcome1:719962451940212736><a:Welcome2:719962501948768337> Hey, on dirait que plusieurs personnes viennent d'arriver ! Je vous ai envoyé un MP contenant ce dont vous avez besoin pour intégrer la meute ! <a:SenkoWelcome:732194291606093897>`)
+        .setThumbnail(member.user.displayAvatarURL({ format: 'png', dynamic: true}))
+        .setFooter(`Nombre de membres : ${member.guild.memberCount}`);
+    
+        newUsers.clear();
+
+    if(userlist === 1) {
+      defaultChannel.send(`${userlist}`, newMember);
+    } 
+
+    if(userlist >= 2) {
+      defaultChannel.send(`${userlist}`, newMembers);
     }
   }, ms(JoinTime));
 
@@ -32,7 +42,7 @@ module.exports = async (client, member) => {
     .setFooter("Un utilisateur a rejoint")
     .setTimestamp();
     
-    client.channels.cache.get('699450511400763423').send(embed2);
+    client.channels.cache.get('729389432612061316').send(embed2);
     
     let embed3 = new MessageEmbed()
     .setTitle(`Bienvenue dans ${member.guild.name}`)
