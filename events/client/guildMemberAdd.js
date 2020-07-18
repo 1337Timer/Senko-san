@@ -1,25 +1,30 @@
 const { MessageEmbed } = require("discord.js");
 const Discord = require('discord.js');
 const newUsers = new Discord.Collection();
+const ms = require("ms");
 
 module.exports = async (client, member) => {
   
-  const guild = member.guild;
+  const defaultChannel = client.channels.cache.get('709599127012638770');
+  let JoinTime = '10s';
   newUsers.set(member.id, member.user);
 
-  let embed1 = new MessageEmbed()
-    .setTitle(`Bienvenue dans ${member.guild.name}`)
-    .setColor('#F4AE42')
-    .setDescription(`<a:Welcome1:719962451940212736><a:Welcome2:719962501948768337> Hey, je vous ai envoyé un MP contenant ce dont vous avez besoin pour intégrer la meute ! <a:SenkoWelcome:732194291606093897>`)
-    .setThumbnail(member.user.displayAvatarURL({ format: 'png', dynamic: true}))
-    .setFooter(`Nombre de membres : ${member.guild.memberCount}`);
-
-  if (newUsers.size >= 3) {
-    const defaultChannel = client.channels.cache.get('639112437286567937');
+  setInterval(() => {
     const userlist = newUsers.map(u => u.toString()).join(", ");
-    defaultChannel.send(userlist, embed1);
+      let embed1 = new MessageEmbed()
+        .setTitle(`Bienvenue dans ${member.guild.name}`)
+        .setColor('#F4AE42')
+        .setDescription(`<a:Welcome1:719962451940212736><a:Welcome2:719962501948768337> Hey, je vous ai envoyé un MP contenant ce dont vous avez besoin pour intégrer la meute ! <a:SenkoWelcome:732194291606093897>`)
+        .setThumbnail(member.user.displayAvatarURL({ format: 'png', dynamic: true}))
+        .setFooter(`Nombre de membres : ${member.guild.memberCount}`);
     newUsers.clear();
-  }
+
+    if(userlist) {
+      defaultChannel.send(`${userlist}`, embed1);
+    } else {
+      return;
+    }
+  }, ms(JoinTime));
 
   let embed2 = new MessageEmbed()
     .setAuthor(`${member} (${member.id})`, member.user.displayAvatarURL({ format: 'png', dynamic: true}))
