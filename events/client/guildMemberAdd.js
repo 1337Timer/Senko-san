@@ -3,7 +3,6 @@ const Discord = require('discord.js');
 const newUsers = new Discord.Collection();
 const ms = require("ms");
 const { Canvas } = require('canvas');
-console.log(__dirname);
 
 const applyText = (canvas, text) => {
 	const ctx = canvas.getContext('2d');
