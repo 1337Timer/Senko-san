@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 const newUsers = new Discord.Collection();
 const ms = require("ms");
 const { createCanvas, loadImage, registerFont } = require('canvas');
-registerFont(__dirname + '/Montserrat.ttf', { family: 'Montserrat', weight: 'normal' });
+registerFont(__dirname + '/Uni Sans Heavy.otf', { family: 'Uni Sans Heavy', weight: 'normal' });
 
 module.exports = async (client, member) => {
   
@@ -40,17 +40,17 @@ module.exports = async (client, member) => {
       ctx.stroke();
 
   // Bienvenue
-  ctx.font = `45px Montserrat`;
+  ctx.font = `45px Uni Sans Heavy`;
 	ctx.fillStyle = '#ffffff';
   ctx.fillText("BIENVENUE", 340, 180);
 
   // Pseudo de la personne
-  ctx.font = `900 45px Montserrat`;
+  ctx.font = `900 45px Uni Sans Heavy`;
 	ctx.fillStyle = '#D30007';
   ctx.fillText(member.displayName, 340, 245);
 
   // Bienvenue
-  ctx.font = `45px Montserrat`;
+  ctx.font = `45px Uni Sans Heavy`;
 	ctx.fillStyle = '#ffffff';
   ctx.fillText("DANS LA MEUTE !", 340, 300);
 
