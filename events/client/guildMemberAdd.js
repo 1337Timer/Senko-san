@@ -9,7 +9,7 @@ const applyText = (canvas, text) => {
 	let fontSize = 70;
 
 	do {
-		ctx.font = `900 ${fontSize -= 10}px Montserrat`;
+		ctx.font = `900 ${fontSize -= 10}px Comics Sans MS`;
 	} while (ctx.measureText(text).width > canvas.width - 300);
 
   return ctx.font;
@@ -50,7 +50,7 @@ module.exports = async (client, member) => {
       ctx.stroke();
 
   // Bienvenue
-  ctx.font = `45px Montserrat`;
+  ctx.font = `45px Comics Sans MS`;
 	ctx.fillStyle = '#ffffff';
   ctx.fillText("BIENVENUE", 340, 180);
 
@@ -60,7 +60,7 @@ module.exports = async (client, member) => {
   ctx.fillText(member.displayName, 340, 245);
 
   // Bienvenue
-  ctx.font = `45px Montserrat`;
+  ctx.font = `45px Comics Sans MS`;
 	ctx.fillStyle = '#ffffff';
   ctx.fillText("DANS LA MEUTE !", 340, 300);
 
