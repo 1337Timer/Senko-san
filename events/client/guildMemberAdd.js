@@ -45,7 +45,7 @@ module.exports = async (client, member) => {
   ctx.fillText("BIENVENUE", 340, 180);
 
   // Pseudo de la personne
-  ctx.font = `900 45px Uni Sans Heavy`;
+  ctx.font = `60px Uni Sans Heavy`;
 	ctx.fillStyle = '#D30007';
   ctx.fillText(member.displayName, 340, 245);
 
