@@ -7,4 +7,4 @@ module.exports.run = async (client, message) => {
     message.delete();
 };
 
-module.exports.help = MESSAGES.COMMANDS.ADMIN.TEST;
+module.exports.help = MESSAGES.COMMANDS.AUTRE.TEST;
