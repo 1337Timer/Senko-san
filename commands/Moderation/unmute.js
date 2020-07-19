@@ -12,7 +12,7 @@ module.exports.run = (client, message, args) => {
     const embed = new MessageEmbed()
         .setAuthor(`${user.user.username} (${user.id})`, user.user.avatarURL())
         .setColor("#FFC621")
-        .setDescription(`<:IconJoin:731919767425777806>**Action**: Unmute`)
+        .setDescription(`<:IconJoin:731919767425777806> **Action**: Unmute`)
         .setTimestamp()
         .setFooter(message.author.username, message.author.avatarURL());
 

@@ -9,7 +9,7 @@ module.exports.run = (client, message, args) => {
     const embed = new MessageEmbed()
         .setAuthor(`${user.username} (${user.id})`)
         .setColor("#FFC621")
-        .setDescription(`**<:IconJoin:731919767425777806>Action**: Kick\n<:ItemMagnifyingGlass:732197467759706132>**Raison**: ${reason}`)
+        .setDescription(`**<:IconJoin:731919767425777806> Action**: Kick\n<:ItemMagnifyingGlass:732197467759706132> **Raison**: ${reason}`)
         .setThumbnail(user.avatarURL())
         .setTimestamp()
         .setFooter(message.author.username, message.author.avatarURL());

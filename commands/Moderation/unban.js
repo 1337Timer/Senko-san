@@ -9,7 +9,7 @@ module.exports.run = async (client, message, args) => {
     const embed = new MessageEmbed()
         .setAuthor(`${user.username} (${user.id})`, user.avatarURL())
         .setColor("#F05959")
-        .setDescription(`**<:IconJoin:731919767425777806>Action**: Unban`)
+        .setDescription(`**<:IconJoin:731919767425777806> Action**: Unban`)
         .setTimestamp()
         .setFooter(message.author.username, message.author.avatarURL());
 

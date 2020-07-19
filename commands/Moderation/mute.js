@@ -35,7 +35,7 @@ module.exports.run = async (client, message, args) => {
     const embed = new MessageEmbed()
         .setAuthor(`${user.user.username} (${user.id})`, user.user.avatarURL())
         .setColor("#FFC621")
-        .setDescription(`**<:IconJoin:731919767425777806>Action**: Mute\n<:ItemMagnifyingGlass:732197467759706132>**Raison**: ${ms(ms(muteTime))}`)
+        .setDescription(`**<:IconJoin:731919767425777806>Action**: Mute\n<:ItemMagnifyingGlass:732197467759706132> **Raison**: ${ms(ms(muteTime))}`)
         .setTimestamp()
         .setFooter(message.author.username, message.author.avatarURL());
 
