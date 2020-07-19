@@ -3,9 +3,11 @@ const Discord = require('discord.js');
 const newUsers = new Discord.Collection();
 const ms = require("ms");
 const Canvas = require('canvas');
+const registerFont = require("canvas");
 
 const applyText = (canvas, text) => {
-	const ctx = canvas.getContext('2d');
+  const ctx = canvas.getContext('2d');
+  registerFont('Montserrat-Regular.ttf', { family: 'Montserrat'})
 	let fontSize = 70;
 
 	do {
