@@ -2,10 +2,81 @@ const { MessageEmbed } = require("discord.js");
 const Discord = require('discord.js');
 const newUsers = new Discord.Collection();
 const ms = require("ms");
+const Canvas = require('canvas');
+
+const applyText = (canvas, text) => {
+	const ctx = canvas.getContext('2d');
+	let fontSize = 70;
+
+	do {
+		ctx.font = `900 ${fontSize -= 10}px Montserrat`;
+	} while (ctx.measureText(text).width > canvas.width - 300);
+
+  return ctx.font;
+}
 
 module.exports = async (client, member) => {
   
+  const channel = client.channels.cache.get('639112437286567937');
+  const canvas = Canvas.createCanvas(1024, 450);
+  const ctx = canvas.getContext("2d");
+
+  const background = await Canvas.loadImage("./image.jpg");
+  ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
+
+  // Ligne
+  ctx.beginPath();
+      // Bas
+      ctx.moveTo(323, 325);
+      ctx.lineTo(780, 325);
+      ctx.lineWidth = 5;
+      ctx.strokeStyle = '#ffffff';
+      ctx.stroke();
+
+      // 1er Haut
+      ctx.beginPath();
+      ctx.moveTo(322.5, 125);
+      ctx.lineTo(700, 125);
+      ctx.lineWidth = 5;
+      ctx.strokeStyle = '#ffffff';
+      ctx.stroke();
+      
+      // Gauche 
+      ctx.beginPath();
+      ctx.moveTo(325, 125);
+      ctx.lineTo(325, 310);
+      ctx.lineWidth = 5;
+      ctx.strokeStyle = '#ffffff';
+      ctx.stroke();
+
+  // Bienvenue
+  ctx.font = `45px Montserrat`;
+	ctx.fillStyle = '#ffffff';
+  ctx.fillText("BIENVENUE", 340, 180);
+
+  // Pseudo de la personne
+  ctx.font = applyText(canvas, member.displayName);
+	ctx.fillStyle = '#D30007';
+  ctx.fillText(member.displayName, 340, 245);
+
+  // Bienvenue
+  ctx.font = `45px Montserrat`;
+	ctx.fillStyle = '#ffffff';
+  ctx.fillText("DANS LA MEUTE !", 340, 300);
+
+  // Position et taille de l'image
+  const avatar = await Canvas.loadImage(member.user.displayAvatarURL({ format: 'png' }));
+  ctx.drawImage(avatar, 80, 124.5, 205, 205);
+  
+  const attachment = new Discord.MessageAttachment(
+  canvas.toBuffer(),
+  "welcome-image.png"
+  );
+
+  channel.send(attachment);
+
   const defaultChannel = client.channels.cache.get('639112437286567937');
+
   let JoinTime = '5m';
   newUsers.set(member.id, member.user);
 

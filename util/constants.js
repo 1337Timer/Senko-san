@@ -214,6 +214,18 @@ const MESSAGES = {
                 args: false
             },
 
+            TEST: {
+                name: 'test',
+                aliases: ['test'],
+                category:'autre',
+                description: 'test dé truk cool',
+                cooldown: 0,
+                usage:'',
+                isUserAdmin: false,
+                permissions: false,
+                args: false
+            },
+
             USERINFO: {
                 name: 'userinfo',
                 aliases: ['ui'],
