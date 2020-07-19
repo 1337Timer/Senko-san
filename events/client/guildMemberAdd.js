@@ -2,17 +2,16 @@ const { MessageEmbed } = require("discord.js");
 const Discord = require('discord.js');
 const newUsers = new Discord.Collection();
 const ms = require("ms");
-const Canvas = require('canvas');
-const registerFont = require('canvas');
+const { createCanvas, loadImage, registerFont } = require('canvas');
 registerFont(__dirname + '/Roboto.ttf', { family: 'Roboto', weight: 'normal' });
 
 module.exports = async (client, member) => {
   
   const channel = client.channels.cache.get('709599127012638770');
-  const canvas = Canvas.createCanvas(1024, 450);
+  const canvas = createCanvas(1024, 450);
   const ctx = canvas.getContext("2d");
 
-  const background = await Canvas.loadImage("./image.jpg");
+  const background = await loadImage("./image.jpg");
   ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
 
   // Ligne
@@ -56,7 +55,7 @@ module.exports = async (client, member) => {
   ctx.fillText("DANS LA MEUTE !", 340, 300);
 
   // Position et taille de l'image
-  const avatar = await Canvas.loadImage(member.user.displayAvatarURL({ format: 'png' }));
+  const avatar = await loadImage(member.user.displayAvatarURL({ format: 'png' }));
   ctx.drawImage(avatar, 80, 124.5, 205, 205);
   
   const attachment = new Discord.MessageAttachment(
