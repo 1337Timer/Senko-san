@@ -2,19 +2,9 @@ const { MessageEmbed } = require("discord.js");
 const Discord = require('discord.js');
 const newUsers = new Discord.Collection();
 const ms = require("ms");
-const { Canvas, registerFont } = require('canvas');
+const Canvas = require('canvas');
+const registerFont = require('canvas');
 registerFont(__dirname + '/Roboto.ttf', { family: 'Roboto', weight: 'normal' });
-
-const applyText = (canvas, text) => {
-	const ctx = canvas.getContext('2d');
-	let fontSize = 70;
-
-	do {
-		ctx.font = `900 ${fontSize -= 10}px Comics Sans MS`;
-	} while (ctx.measureText(text).width > canvas.width - 300);
-
-  return ctx.font;
-}
 
 module.exports = async (client, member) => {
   
