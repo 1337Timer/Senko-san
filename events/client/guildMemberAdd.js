@@ -45,7 +45,7 @@ module.exports = async (client, member) => {
   ctx.fillText("BIENVENUE", 340, 180);
 
   // Pseudo de la personne
-  ctx.font = applyText(canvas, member.displayName);
+  ctx.font = `45px Roboto`;
 	ctx.fillStyle = '#D30007';
   ctx.fillText(member.displayName, 340, 245);
 
