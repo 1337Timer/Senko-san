@@ -5,7 +5,6 @@ module.exports.run = async (client, message) => {
     message.member || (await message.guild.fetchMember(message.author)))
 
     message.delete();
-    console.log(__dirname);
 };
 
 module.exports.help = MESSAGES.COMMANDS.AUTRE.TEST;

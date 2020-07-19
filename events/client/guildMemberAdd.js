@@ -2,7 +2,8 @@ const { MessageEmbed } = require("discord.js");
 const Discord = require('discord.js');
 const newUsers = new Discord.Collection();
 const ms = require("ms");
-const { Canvas } = require('canvas');
+const { Canvas, registerFont } = require('canvas');
+registerFont(__dirname + '/Roboto.ttf', { family: 'Roboto', weight: 'normal' });
 
 const applyText = (canvas, text) => {
 	const ctx = canvas.getContext('2d');
@@ -50,7 +51,7 @@ module.exports = async (client, member) => {
       ctx.stroke();
 
   // Bienvenue
-  ctx.font = `45px Comics Sans MS`;
+  ctx.font = `45px Roboto`;
 	ctx.fillStyle = '#ffffff';
   ctx.fillText("BIENVENUE", 340, 180);
 
@@ -60,7 +61,7 @@ module.exports = async (client, member) => {
   ctx.fillText(member.displayName, 340, 245);
 
   // Bienvenue
-  ctx.font = `45px Comics Sans MS`;
+  ctx.font = `45px Roboto`;
 	ctx.fillStyle = '#ffffff';
   ctx.fillText("DANS LA MEUTE !", 340, 300);
 

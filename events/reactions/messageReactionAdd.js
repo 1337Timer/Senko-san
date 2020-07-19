@@ -23,5 +23,4 @@ module.exports = async (client, messageReaction, user) => {
         }
     }
 
-    console.log(__dirname);
 };
