@@ -9,12 +9,12 @@ module.exports.run = (client, message, args) => {
     .setColor("#39A7F3")
     .setThumbnail(guild.iconURL({ format: 'png', dynamic: true}))
     .setTitle(`${guild.name}`)
-    .addField(`<:Proprietaire:731207221123219548> Propriétaire :`,`${guild.owner.user}`)
-    .addField(`<:Temps:731207221190328372> Créé le :`, `${moment(guild.createdAt).format('DD/MM/YYYY')}`)
-    .addField(`<:Roles:731207222264332358> Roles :`, `${guild.roles.cache.map(roles => `${roles}`)}`)
-    .addField(`<:Textuel:731207220611776582> Salons textuels :`, `${guild.channels.cache.filter(ch => ch.type === 'text').size} salons`)
-    .addField(`<:Vocal:731207219236044881> Salons vocaux :`, `${guild.channels.cache.filter(ch => ch.type === 'voice').size} salons`)
-    .addField(`<:Membres:731206879732301984> Nombre de membre :`, `${guild.memberCount} membres`)
+    .addField(`<:Proprietaire:735207548658909334> Propriétaire :`,`${guild.owner.user}`)
+    .addField(`<:IconSlowmode:735211791554183200> Créé le :`, `${moment(guild.createdAt).format('DD/MM/YYYY')}`)
+    .addField(`<:Roles:735207542946398279> Roles :`, `${guild.roles.cache.map(roles => `${roles}`)}`)
+    .addField(`<:IconTextChannel:735211943534788721>> Salons textuels :`, `${guild.channels.cache.filter(ch => ch.type === 'text').size} salons`)
+    .addField(`<:IconVoiceChannel:735212068084514948> Salons vocaux :`, `${guild.channels.cache.filter(ch => ch.type === 'voice').size} salons`)
+    .addField(`<:Membres:735207906420588645> Nombre de membre :`, `${guild.memberCount} membres`)
 
    message.channel.send(embed);
    message.delete();

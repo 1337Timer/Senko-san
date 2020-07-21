@@ -21,7 +21,7 @@ module.exports.run = async (client, message, args) => {
     }
 
     if(message.mentions.users.size == 2) {
-        message.channel.send("<:SenkoThinking:732192434137727057> Mentionnez un utilisateur à la fois.")
+        message.channel.send("<:SenkoThinking:735210310138331229> Mentionnez un utilisateur à la fois.")
     }
             
 }

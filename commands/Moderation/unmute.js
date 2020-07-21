@@ -5,14 +5,14 @@ module.exports.run = (client, message, args) => {
     const user = message.guild.member(message.mentions.users.first());
     let muteRole = message.guild.roles.cache.find(r => r.name === 'muted');
 
-    if (!user.roles.cache.has(muteRole.id)) return message.reply("<:SenkoThinking:732192434137727057> L'utilisateur mentionné n'est pas muté.")
+    if (!user.roles.cache.has(muteRole.id)) return message.reply("<:SenkoThinking:735210310138331229> L'utilisateur mentionné n'est pas muté.")
     user.roles.remove(muteRole.id);
     message.channel.send(`<a:senkoEars:732199112820260875> <@${user.id}> n'est plus muté.`);
 
     const embed = new MessageEmbed()
         .setAuthor(`${user.user.username} (${user.id})`, user.user.avatarURL())
         .setColor("#FFC621")
-        .setDescription(`<:IconJoin:731919767425777806> **Action**: Unmute`)
+        .setDescription(`<:IconJoin:735207925370454066> **Action**: Unmute`)
         .setTimestamp()
         .setFooter(message.author.username, message.author.avatarURL());
 

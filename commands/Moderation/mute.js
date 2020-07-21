@@ -26,7 +26,7 @@ module.exports.run = async (client, message, args) => {
     }
 
     await user.roles.add(muteRole.id);
-    message.channel.send(`<a:senkoEars:732199112820260875> <@${user.id}> est muté pour ${ms(ms(muteTime))}.`);
+    message.channel.send(`<a:senkoEars:735207492354834543> <@${user.id}> est muté pour ${ms(ms(muteTime))}.`);
 
     setTimeout(() => {
         user.roles.remove(muteRole.id);
@@ -35,7 +35,7 @@ module.exports.run = async (client, message, args) => {
     const embed = new MessageEmbed()
         .setAuthor(`${user.user.username} (${user.id})`, user.user.avatarURL())
         .setColor("#FFC621")
-        .setDescription(`**<:IconJoin:731919767425777806>Action**: Mute\n<:ItemMagnifyingGlass:732197467759706132> **Raison**: ${ms(ms(muteTime))}`)
+        .setDescription(`**<:IconJoin:735207925370454066> Action**: Mute\n<:ItemMagnifyingGlass:735207739587952682> **Raison**: ${ms(ms(muteTime))}`)
         .setTimestamp()
         .setFooter(message.author.username, message.author.avatarURL());
 

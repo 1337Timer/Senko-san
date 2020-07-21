@@ -15,7 +15,7 @@ module.exports.run = (client, message, args) => {
 
         for (const category of categoryList) {
             embed.addField(
-                `<:IconJoin:731919767425777806> ${category}`,
+                `<:IconJoin:735207925370454066> ${category}`,
                 `${client.commands.filter(cat => cat.help.category === category.toLowerCase()).map(cmd => cmd.help.name).join(', ')}`
             );
         };
@@ -23,7 +23,7 @@ module.exports.run = (client, message, args) => {
         return message.channel.send(embed);
     } else {
         const command = client.commands.get(args[0]) || client.commands.find(cmd => cmd.help.aliases && cmd.help.aliases.includes(args[0]));
-        if (!command) return message.reply("<:SenkoThinking:732192434137727057> Cette commande n'exite pas.");
+        if (!command) return message.reply("<:SenkoThinking:735210310138331229>Cette commande n'exite pas.");
 
         const embed = new MessageEmbed()
         .setColor("#F4AE42")

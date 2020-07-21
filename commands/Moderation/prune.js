@@ -2,7 +2,7 @@ const { MESSAGES } = require("../../util/constants");
 
 module.exports.run = async (client, message, args) => {
     let user = message.guild.member(message.mentions.users.first());
-    if (isNaN(args[1]) || (args[1] < 1 || args[1] > 100)) return message.reply('<:SenkoThinking:732192434137727057> Spécifiez un nombre entre 1 et 100.');
+    if (isNaN(args[1]) || (args[1] < 1 || args[1] > 100)) return message.reply('<:SenkoThinking:735210310138331229> Spécifiez un nombre entre 1 et 100.');
 
     const messages = (await message.channel.messages.fetch({
         limit: 100,
@@ -11,7 +11,7 @@ module.exports.run = async (client, message, args) => {
 
     message.length = Math.min(args[1], messages.length);
 
-    if (message.length === 0 || !user) return message.reply('<:SenkoThinking:732192434137727057> Aucun message à supprimer/Cet utilisateur n\'existe pas');
+    if (message.length === 0 || !user) return message.reply('<:SenkoThinking:735210310138331229> Aucun message à supprimer/Cet utilisateur n\'existe pas');
 
     if (messages.length === 1) await messages[0].delete();
     else await message.channel.bulkDelete(messages);

@@ -14,16 +14,16 @@ module.exports = async (client, message) => {
   if(command.help.permissions && !message.member.hasPermission('BAN_MEMBERS')) return message.reply("<:SenkoThinking:732192434137727057> Tu ne possède pas les permissions nécessaires pour éxecuter cette commande.");
 
   if (command.help.args && !args.length) {
-      let noArgsReply = `<:SenkoThinking:732192434137727057> Cette commande nécessite des arguments !`;
+      let noArgsReply = `<:SenkoThinking:735210310138331229> Cette commande nécessite des arguments !`;
 
-      if(command.help.usage) noArgsReply += `\n <:IconJoin:731919767425777806> Voici comment utiliser cette commande : \`${PREFIX}${command.help.name} ${command.help.usage}\``;
+      if(command.help.usage) noArgsReply += `\n<:IconJoin:735207925370454066> Voici comment utiliser cette commande : \`${PREFIX}${command.help.name} ${command.help.usage}\``;
 
       return message.channel.send(noArgsReply);
     };
 
   if(command.help.isUserAdmin && !user) return message.reply('Tu dois mentionner un utilisateur.');
 
-  if(command.help.isUserAdmin && message.guild.member(user).hasPermission('BAN_MEMBERS')) return message.reply(" <:SenkoThinking:732192434137727057> Tu ne peux pas utiliser cette commande sur cette utilisateur.");
+  if(command.help.isUserAdmin && message.guild.member(user).hasPermission('BAN_MEMBERS')) return message.reply("<:SenkoThinking:735210310138331229> Tu ne peux pas utiliser cette commande sur cette utilisateur.");
   
   if(!client.cooldowns.has(command.help.name)) {
     client.cooldowns.set(command.help.name, new Collection());
@@ -38,7 +38,7 @@ module.exports = async (client, message) => {
 
     if (timeNow < cdExpirationTime) {
       timeLeft = (cdExpirationTime - timeNow) / 1000;
-      return message.reply(` <:SenkoThinking:732192434137727057> Veuillez attendre **${timeLeft.toFixed(0)}**s avant de pouvoir retapper la commande.`)
+      return message.reply(`<:SenkoThinking:735210310138331229> Veuillez attendre **${timeLeft.toFixed(0)}**s avant de pouvoir retapper la commande.`)
     }
   }
   

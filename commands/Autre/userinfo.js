@@ -11,11 +11,11 @@ module.exports.run = (client, message, args) => {
    .setColor(message.member.displayHexColor)
    .setThumbnail(user.displayAvatarURL({ format: 'png', dynamic: true}))
    .setTitle(`${user.username}`)
-   .addField(`<:Membres:731206879732301984> Nom :`, `${user.tag}`)
-   .addField(`<:Temps:731207221190328372> Créé le :`, `${moment(user.createdAt).format('DD/MM/YYYY')}`)
-   .addField(`<:Liste:731919269134205058> Surnom :`, `${member.nickname === undefined ? '' : `${member.nickname}`}`)
-   .addField(`<:IconJoin:731919767425777806> A rejoint le :`, `${moment(member.joinedAt).format('DD/MM/YYYY')}`)
-   .addField(`<:Roles:731207222264332358> Roles :`, `${member.roles.cache.map(roles => `${roles}`)}`)
+   .addField(`<:Membres:735207906420588645> Nom :`, `${user.tag}`)
+   .addField(`<:IconSlowmode:735211791554183200> Créé le :`, `${moment(user.createdAt).format('DD/MM/YYYY')}`)
+   .addField(`<:Liste:735207895863525417> Surnom :`, `${member.nickname === undefined ? '' : `${member.nickname}`}`)
+   .addField(`<:IconJoin:735207925370454066> A rejoint le :`, `${moment(member.joinedAt).format('DD/MM/YYYY')}`)
+   .addField(`<:Roles:735207542946398279> Roles :`, `${member.roles.cache.map(roles => `${roles}`)}`)
 
    message.channel.send(embed);
    message.delete();
