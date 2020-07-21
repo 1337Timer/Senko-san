@@ -10,11 +10,11 @@ module.exports.run = async (client, message, args) => {
     if(!raison) return message.reply("<:SenkoThinking:735210310138331229> Indiquez une raison")
 
     const embed = new MessageEmbed()
-    .setAuthor(message.author.tag, message.author.displayAvatarURL({ format: 'png', dynamic: true}))
-    .setThumbnail(user.displayAvatarURL({ format: 'png', dynamic: true}))
+    .setAuthor(message.author.tag, message.author.displayAvatarURL())
+    .setThumbnail(user.displayAvatarURL())
     .addFields(
-        { name: "<:IconJoin:735207925370454066> Coupable", value: user.username, inline: true },
-        { name: "🔗 Lien du message", value: isFirstCharNumeric(raison.charAt(0)) ? `[Clique ici](https://discordapp.com/channels/${message.guild.id}/${message.channel.id}/${args[1]})` : 'Aucun lien précisé', inline: true},
+        { name: "<:IconJoin:735207925370454066> Utilisateur reporté", value: user.username, inline: true },
+        { name: "🔗 Liens du message", value: isFirstCharNumeric(raison.charAt(0)) ? `[Clique ici](https://discordapp.com/channels/${message.guild.id}/${message.channel.id}/${args[1]})` : 'Aucun lien précisé', inline: true},
         { name: "<:ItemMagnifyingGlass:735207739587952682> Raison", value: isFirstCharNumeric(raison.charAt(0)) ? args.slice(args.indexOf(args[2])).join(" ") : args.slice(args.indexOf(args[1])).join(" ") }
     )
     .setTimestamp()

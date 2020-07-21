@@ -8,7 +8,6 @@ const MESSAGES = {
                 description: 'Caline à la personne mentionnée',
                 cooldown: 0,
                 usage:'<mention>',
-                isUserAdmin: false,
                 permissions: false,
                 args: true
             },
@@ -20,7 +19,6 @@ const MESSAGES = {
                 description: 'Fait un high-five avec la personne mentionnée',
                 cooldown: 0,
                 usage:'<mention>',
-                isUserAdmin: false,
                 permissions: false,
                 args: true
             },
@@ -32,7 +30,6 @@ const MESSAGES = {
                 description: 'Donne un calin à la personne mentionnée',
                 cooldown: 0,
                 usage:'<mention>',
-                isUserAdmin: false,
                 permissions: false,
                 args: true
             },
@@ -44,7 +41,6 @@ const MESSAGES = {
                 description: 'Tue la personne mentionnée',
                 cooldown: 0,
                 usage:'<mention>',
-                isUserAdmin: false,
                 permissions: false,
                 args: true
             },
@@ -55,7 +51,6 @@ const MESSAGES = {
                 description: 'Embrasse la personne mentionnée',
                 cooldown: 0,
                 usage:'<mention>',
-                isUserAdmin: false,
                 permissions: false,
                 args: true
             },
@@ -66,7 +61,6 @@ const MESSAGES = {
                 description: 'Lèche la personne mentionnée',
                 cooldown: 0,
                 usage:'<mention>',
-                isUserAdmin: false,
                 permissions: false,
                 args: true
             },
@@ -77,7 +71,6 @@ const MESSAGES = {
                 description: 'Mordille la personne mentionnée',
                 cooldown: 0,
                 usage:'<mention>',
-                isUserAdmin: false,
                 permissions: false,
                 args: true
             },
@@ -88,7 +81,6 @@ const MESSAGES = {
                 description: 'Tapote la personne mentionnée',
                 cooldown: 0,
                 usage:'<mention>',
-                isUserAdmin: false,
                 permissions: false,
                 args: true
             },
@@ -99,7 +91,6 @@ const MESSAGES = {
                 description: 'Gifle la personne mentionnée',
                 cooldown: 0,
                 usage:'<mention>',
-                isUserAdmin: false,
                 permissions: false,
                 args: true
             }
@@ -113,7 +104,6 @@ const MESSAGES = {
                 description: 'Renvoie une réponse à une question',
                 cooldown: 0,
                 usage:'<question>',
-                isUserAdmin: false,
                 permissions: false,
                 args: true
             },
@@ -125,7 +115,6 @@ const MESSAGES = {
                 description: 'Envoie des informations concernant l\'activité du serveur',
                 cooldown: 0,
                 usage:'',
-                isUserAdmin: false,
                 permissions: false,
                 args: false
             },
@@ -137,7 +126,6 @@ const MESSAGES = {
                 description: 'Renvoie l\'avatar d\'un utilisateur',
                 cooldown: 0,
                 usage:'<mention>',
-                isUserAdmin: false,
                 permissions: false,
                 args: false
             },
@@ -149,7 +137,6 @@ const MESSAGES = {
                 description: 'Répète le message d\'un utilisateur',
                 cooldown: 0,
                 usage:'<message>',
-                isUserAdmin: false,
                 permissions: false,
                 args: true
             },
@@ -161,7 +148,6 @@ const MESSAGES = {
                 description: 'Renvoie la liste des commandes',
                 cooldown: 10,
                 usage:'',
-                isUserAdmin: false,
                 permissions: false,
                 args: false
             },
@@ -173,7 +159,6 @@ const MESSAGES = {
                 description: 'Affiche la latence du bot.',
                 cooldown: 0,
                 usage:'',
-                isUserAdmin: false,
                 permissions: false,
                 args: false
             },
@@ -185,7 +170,6 @@ const MESSAGES = {
                 description: 'Renvoie un sondage',
                 cooldown: 0,
                 usage:'<sondage>',
-                isUserAdmin: false,
                 permissions: false,
                 args: true
             },
@@ -197,7 +181,6 @@ const MESSAGES = {
                 description: 'Envoie des informations concernant le serveur',
                 cooldown: 5,
                 usage:'',
-                isUserAdmin: false,
                 permissions: false,
                 args: false
             },
@@ -209,7 +192,6 @@ const MESSAGES = {
                 description: 'Envoie une emote de Senko',
                 cooldown: 5,
                 usage:'',
-                isUserAdmin: false,
                 permissions: false,
                 args: false
             },
@@ -221,7 +203,6 @@ const MESSAGES = {
                 description: 'test dé truk cool',
                 cooldown: 0,
                 usage:'',
-                isUserAdmin: false,
                 permissions: false,
                 args: false
             },
@@ -233,7 +214,6 @@ const MESSAGES = {
                 description: 'Envoie vos informations/des informations concernant un utilisateur',
                 cooldown: 0,
                 usage:'<mention>',
-                isUserAdmin: false,
                 permissions: false,
                 args: false
             }
@@ -248,7 +228,6 @@ const MESSAGES = {
                 description: 'Renvoie un GIF d\'une personne qui rougit ',
                 cooldown: 0,
                 usage:'',
-                isUserAdmin: false,
                 permissions: false,
                 args: false
               },
@@ -260,7 +239,6 @@ const MESSAGES = {
                 description: 'Renvoie un GIF d\'une personne qui pleure',
                 cooldown: 0,
                 usage:'',
-                isUserAdmin: false,
                 permissions: false,
                 args: false
                },
@@ -272,7 +250,6 @@ const MESSAGES = {
                 description: 'Renvoie une GIF d\'une personne gênée',
                 cooldown: 0,
                 usage:'',
-                isUserAdmin: false,
                 permissions: false,
                 args: false
             },
@@ -284,7 +261,6 @@ const MESSAGES = {
                 description: 'Renvoie un GIF d\'une personne souriante',
                 cooldown: 0,
                 usage:'',
-                isUserAdmin: false,
                 permissions: false,
                 args: false              
             },
@@ -296,7 +272,6 @@ const MESSAGES = {
                 description: 'Renvoie un GIF d\'une personne avec un regard arrogant',
                 cooldown: 0,
                 usage:'',
-                isUserAdmin: false,
                 permissions: false,
                 args: false              
             },
@@ -308,7 +283,6 @@ const MESSAGES = {
                 description: 'Renvoie un GIF d\'une personne avec le pouce levé' ,
                 cooldown: 0,
                 usage:'',
-                isUserAdmin: false,
                 permissions: false,
                 args: false              
             }
@@ -323,7 +297,6 @@ const MESSAGES = {
                 description: 'Renvoie des images de chat',
                 cooldown: 0,
                 usage:'',
-                isUserAdmin: false,
                 permissions: false,
                 args: false
               },
@@ -335,7 +308,6 @@ const MESSAGES = {
                 description: 'Renvoie des images de chien',
                 cooldown: 0,
                 usage:'',
-                isUserAdmin: false,
                 permissions: false,
                 args: false
                },
@@ -347,7 +319,6 @@ const MESSAGES = {
                 description: 'Renvoie des images de renard',
                 cooldown: 0,
                 usage:'',
-                isUserAdmin: false,
                 permissions: false,
                 args: false
             },
@@ -359,7 +330,6 @@ const MESSAGES = {
                 description: 'Renvoie des memes',
                 cooldown: 0,
                 usage:'',
-                isUserAdmin: false,
                 permissions: false,
                 args: false              
             }
@@ -373,8 +343,7 @@ const MESSAGES = {
                 category:'moderation',
                 description: 'Ban un utilisateur',
                 cooldown: 0,
-                usage:'<mention> <raison>',
-                isUserAdmin: true,
+                usage:'<id> <raison>',
                 permissions: true,
                 args: true
             },
@@ -385,8 +354,18 @@ const MESSAGES = {
                 category:'moderation',
                 description: 'Expulse un utilisateur',
                 cooldown: 0,
-                usage:'<mention> <raison>',
-                isUserAdmin: true,
+                usage:'<id> <raison>',
+                permissions: true,
+                args: true
+            },
+
+            MBAN : {
+                name: 'mban',
+                aliases: ['mb'],
+                category:'moderation',
+                description: 'Ban plusieurs utilisateurs',
+                cooldown: 0,
+                usage:'<id> <id>',
                 permissions: true,
                 args: true
             },
@@ -398,19 +377,6 @@ const MESSAGES = {
                 description: 'Met en sourdine un utilisateur',
                 cooldown: 0,
                 usage:'<mention> <temps>',
-                isUserAdmin: true,
-                permissions: true,
-                args: true
-            },
-
-            PRUNE: {
-                name: 'prune',
-                aliases: ['prune'],
-                category:'moderation',
-                description: 'Supprime un nombre X de messages d\'un utilisateur en particulier',
-                cooldown: 0,
-                usage:'<mention> <nbr_messages>',
-                isUserAdmin: true,
                 permissions: true,
                 args: true
             },
@@ -422,7 +388,6 @@ const MESSAGES = {
                 description: 'Supprime un nombre X de messages',
                 cooldown: 0,
                 usage:'<nbr_messages>',
-                isUserAdmin: false,
                 permissions: true,
                 args: true
             },
@@ -434,7 +399,6 @@ const MESSAGES = {
                 description: 'Signale un utilisateur',
                 cooldown: 0,
                 usage:'<mention> <id_message> <raison>',
-                isUserAdmin: false,
                 permissions: false,
                 args: true
             },
@@ -446,7 +410,6 @@ const MESSAGES = {
                 description: 'Unban un utilisateur',
                 cooldown: 0,
                 usage:'<id>',
-                isUserAdmin: false,
                 permissions: true,
                 args: true
             },
@@ -458,7 +421,6 @@ const MESSAGES = {
                 description: 'Rétabli la voix d\'un utilisateur',
                 cooldownn: 0,
                 usage:'<mention>',
-                isUserAdmin: true,
                 permissions: true,
                 args: true
             }
@@ -472,7 +434,6 @@ const MESSAGES = {
                 description: 'Envoie un message avec des réactions.',
                 cooldown: 0,
                 usage:'',
-                isUserAdmin: false,
                 permissions: false,
                 args: false
             }

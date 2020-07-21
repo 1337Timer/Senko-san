@@ -21,9 +21,7 @@ module.exports = async (client, message) => {
       return message.channel.send(noArgsReply);
     };
 
-  if(command.help.isUserAdmin && !user) return message.reply('Tu dois mentionner un utilisateur.');
-
-  if(command.help.isUserAdmin && message.guild.member(user).hasPermission('BAN_MEMBERS')) return message.reply("<:SenkoThinking:735210310138331229> Tu ne peux pas utiliser cette commande sur cette utilisateur.");
+  if(message.guild.member(user).hasPermission('BAN_MEMBERS')) return message.reply("<:SenkoThinking:735210310138331229> Tu ne peux pas utiliser cette commande sur cette utilisateur.");
   
   if(!client.cooldowns.has(command.help.name)) {
     client.cooldowns.set(command.help.name, new Collection());
