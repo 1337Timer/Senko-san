@@ -75,7 +75,7 @@ module.exports = async (client, member) => {
       let embed1 = new MessageEmbed()
         .setTitle(`Bienvenue dans ${member.guild.name}`)
         .setColor('#F4AE42')
-        .setDescription(`<a:Welcome1:719962451940212736><a:Welcome2:719962501948768337> Hey, je vous ai envoyé un MP contenant ce dont vous avez besoin pour intégrer la meute ! <a:SenkoWelcome:732194291606093897>`)
+        .setDescription(`<a:Welcome1:735208586245832785><a:Welcome2:735208578092236942> Hey, je vous ai envoyé un MP contenant ce dont vous avez besoin pour intégrer la meute ! <a:SenkoWelcome:735208674695577660>`)
         .setThumbnail(member.user.displayAvatarURL({ format: 'png', dynamic: true}))
         .setFooter(`Nombre de membres : ${member.guild.memberCount}`);
     newUsers.clear();
@@ -98,7 +98,7 @@ module.exports = async (client, member) => {
     let embed3 = new MessageEmbed()
     .setTitle(`Bienvenue dans ${member.guild.name}`)
     .setColor('#F4AE42')
-    .setDescription(`<a:Welcome1:719962451940212736><a:Welcome2:719962501948768337> Bienvenue à toi sur le serveur ! Regarde bien les règles pour éviter de futures sanctions. \n \n **Pour accéder au serveur, clique sur la réaction <a:check:722493283850518598> en dessous des règles.**`)
+    .setDescription(`<a:Welcome1:735208586245832785><a:Welcome2:735208578092236942> Bienvenue à toi sur le serveur ! Regarde bien les règles pour éviter de futures sanctions. \n \n **Pour accéder au serveur, clique sur la réaction <a:check:735208031817695284> en dessous des règles.**`)
     .setImage('https://i.ibb.co/h8Q9Nrp/19f3e47f-0794-4cc8-8d7d-eae48a850419-profile-banner-480.png')
     
     member.createDM().then(function(channel) {

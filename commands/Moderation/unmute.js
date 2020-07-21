@@ -7,7 +7,7 @@ module.exports.run = (client, message, args) => {
 
     if (!user.roles.cache.has(muteRole.id)) return message.reply("<:SenkoThinking:735210310138331229> L'utilisateur mentionné n'est pas muté.")
     user.roles.remove(muteRole.id);
-    message.channel.send(`<a:senkoEars:732199112820260875> <@${user.id}> n'est plus muté.`);
+    message.channel.send(`<a:senkoEars:735207492354834543> <@${user.id}> n'est plus muté.`);
 
     const embed = new MessageEmbed()
         .setAuthor(`${user.user.username} (${user.id})`, user.user.avatarURL())
