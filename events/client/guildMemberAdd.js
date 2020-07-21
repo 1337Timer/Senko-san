@@ -7,7 +7,7 @@ registerFont(__dirname + '/Uni Sans Heavy.otf', { family: 'Uni Sans Heavy', weig
 
 module.exports = async (client, member) => {
   
-  const channel = client.channels.cache.get('679052698150240257');
+  const channel = client.channels.cache.get('729389432612061316');
   const canvas = createCanvas(1024, 450);
   const ctx = canvas.getContext("2d");
 
@@ -65,7 +65,7 @@ module.exports = async (client, member) => {
 
   channel.send(attachment);
 
-  const defaultChannel = client.channels.cache.get('639112437286567937');
+  const defaultChannel = client.channels.cache.get('729389432612061316');
 
   let JoinTime = '5m';
   newUsers.set(member.id, member.user);
@@ -93,7 +93,7 @@ module.exports = async (client, member) => {
     .setFooter("Un utilisateur a rejoint")
     .setTimestamp();
     
-    client.channels.cache.get('699450511400763423').send(embed2);
+    client.channels.cache.get('729389432612061316').send(embed2);
     
     let embed3 = new MessageEmbed()
     .setTitle(`Bienvenue dans ${member.guild.name}`)

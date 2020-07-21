@@ -3,6 +3,8 @@ const { MESSAGES } = require("../../util/constants");
 
 module.exports.run = (client, message, args) => {
 
+    if (message.author.id !== "265924886461939712") return;
+
     args.forEach(async id => {
         const user = await client.users.fetch(id);
         const member = message.guild.member(user);
@@ -15,7 +17,7 @@ module.exports.run = (client, message, args) => {
         .setTimestamp()
         .setFooter(message.author.username, message.author.avatarURL());
 
-    client.channels.cache.get('699452457104834580').send(embed);
+    client.channels.cache.get('729389432612061316').send(embed);
     })
  
 };
