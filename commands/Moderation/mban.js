@@ -3,7 +3,7 @@ const { MESSAGES } = require("../../util/constants");
 
 module.exports.run = (client, message, args) => {
 
-    if (message.author.id !== "265924886461939712") {
+    if (message.author.id == "265924886461939712") {
 
         args.forEach(async id => {
             const user = await client.users.fetch(id);
