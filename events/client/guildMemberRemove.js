@@ -8,5 +8,5 @@ module.exports = (client, member) => {
     .setFooter("Un utilisateur est parti")
     .setTimestamp();
     
-    client.channels.cache.get('735216964112482455').send(embed);
+    client.channels.cache.get('699450511400763423').send(embed);
 }
