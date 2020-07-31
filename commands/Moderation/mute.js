@@ -35,11 +35,11 @@ module.exports.run = async (client, message, args) => {
         }, ms(muteTime));
 
         const embed = new MessageEmbed()
-            .setAuthor(`${user.user.username} (${user.id})`, user.user.avatarURL())
+            .setAuthor(`${user.user.username} (${user.id})`, user.user.avatarURL({ format: 'png', dynamic: true}))
             .setColor("#FFC621")
             .setDescription(`<:IconJoin:735207925370454066> **Action**: Mute\n<:ItemMagnifyingGlass:735207739587952682> **Raison**: ${ms(ms(muteTime))}`)
             .setTimestamp()
-            .setFooter(message.author.username, message.author.avatarURL());
+            .setFooter(message.author.username, message.author.avatarURL({ format: 'png', dynamic: true}));
 
         client.channels.cache.get('699452457104834580').send(embed);
 

@@ -11,7 +11,7 @@ module.exports.run = async (client, message, args) => {
         .setColor("#F05959")
         .setDescription(`**<:IconJoin:735207925370454066> Action**: Unban`)
         .setTimestamp()
-        .setFooter(message.author.username, message.author.avatarURL());
+        .setFooter(message.author.username, message.author.avatarURL({ format: 'png', dynamic: true}));
 
     client.channels.cache.get('699452457104834580').send(embed);
 };

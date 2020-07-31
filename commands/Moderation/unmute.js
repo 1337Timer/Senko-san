@@ -12,11 +12,11 @@ module.exports.run = async (client, message, args) => {
     message.channel.send(`<@${user.id}> n'est plus muté.`);
 
     const embed = new MessageEmbed()
-        .setAuthor(`${user.user.username} (${user.id})`, user.user.avatarURL())
+        .setAuthor(`${user.user.username} (${user.id})`, user.user.avatarURL({ format: 'png', dynamic: true}))
         .setColor("#FFC621")
         .setDescription(`**<:IconJoin:735207925370454066> Action**: Unmute`)
         .setTimestamp()
-        .setFooter(message.author.username, message.author.avatarURL());
+        .setFooter(message.author.username, message.author.avatarURL({ format: 'png', dynamic: true}));
 
     client.channels.cache.get('699452457104834580').send(embed);
 

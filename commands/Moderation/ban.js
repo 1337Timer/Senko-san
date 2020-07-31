@@ -12,7 +12,7 @@ module.exports.run = async (client, message, args) => {
         .setDescription(`<:IconJoin:735207925370454066> **Action**: Ban\n<:ItemMagnifyingGlass:735207739587952682> **Raison**: ${reason}`)
         .setThumbnail(user.avatarURL())
         .setTimestamp()
-        .setFooter(message.author.username, message.author.avatarURL());
+        .setFooter(message.author.username, message.author.avatarURL({ format: 'png', dynamic: true}));
 
     client.channels.cache.get('699452457104834580').send(embed);
 };

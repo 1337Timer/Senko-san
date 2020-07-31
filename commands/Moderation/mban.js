@@ -16,7 +16,7 @@ module.exports.run = (client, message, args) => {
             .setColor("#F05959")
             .setDescription(`<:IconJoin:735207925370454066> **Action**: Multi-ban`)
             .setTimestamp()
-            .setFooter(message.author.username, message.author.avatarURL());
+            .setFooter(message.author.username, message.author.avatarURL({ format: 'png', dynamic: true}));
 
         client.channels.cache.get('735216964112482455').send(embed);
         })

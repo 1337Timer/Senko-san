@@ -11,7 +11,7 @@ module.exports.run = async (client, message, args) => {
 
     const embed = new MessageEmbed()
     .setAuthor(message.author.tag, message.author.displayAvatarURL())
-    .setThumbnail(user.displayAvatarURL())
+    .setThumbnail(user.displayAvatarURL({ format: 'png', dynamic: true}))
     .addFields(
         { name: "<:IconJoin:735207925370454066> Utilisateur reporté", value: user.username, inline: true },
         { name: "🔗 Liens du message", value: isFirstCharNumeric(raison.charAt(0)) ? `[Clique ici](https://discordapp.com/channels/${message.guild.id}/${message.channel.id}/${args[1]})` : 'Aucun lien précisé', inline: true},
