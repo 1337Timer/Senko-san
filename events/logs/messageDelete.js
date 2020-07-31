@@ -10,13 +10,13 @@ module.exports = async (client, message) => {
         type: 'MESSAGE_DELETE'
     });
 
-    const lastestMessageDeleted = fetchGuildAuditLogs.entries.first();
-    const { executor } = lastestMessageDeleted;
+    const latestMessageDeleted = fetchGuildAuditLogs.entries.first();
+    const { executor } = latestMessageDeleted;
 
     const embed = new MessageEmbed()
     .setAuthor("Message supprimé")
     .setColor("#DD5F53")
-    .setDescription(`<:IconJoin:735207925370454066> **Message :**\n ${message.content}`)
+    .setDescription(`<:IconJoin:735207925370454066> **Message** :\n ${message.content}\n**Auteur du message** : ${message.author}`)
     .setFooter(executor.username, executor.displayAvatarUrl({ format: 'png', dynamic: true}));
 
     client.channels.cache.get('699458377381838878').send(embed);
