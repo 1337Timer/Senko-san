@@ -17,7 +17,7 @@ module.exports = async (client, message) => {
     .setAuthor("Message supprimé")
     .setColor("#DD5F53")
     .setDescription(`<:IconJoin:735207925370454066> **Message** :\n ${message.content}\n**Auteur du message** : ${message.author}`)
-    .setFooter(executor.username, executor.displayAvatarUrl());
+    .setFooter(executor.username, executor.displayAvatarURL());
 
     client.channels.cache.get('699458377381838878').send(embed);
 
