@@ -10,7 +10,7 @@ module.exports.run = async (client, message, args) => {
 
     message.delete();
     await message.channel.bulkDelete(messages);
-    message.channel.send("<a:hsaCleanDirt:739592248240504872> Messages supprimés !").then(msg => {msg.delete({ timeout: 15000 })});
+    message.channel.send("<a:hsaCleanDirt:739592248240504872> Messages supprimés !").then(msg => {msg.delete({ timeout: 5000 })});
 
 };
 
