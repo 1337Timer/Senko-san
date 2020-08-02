@@ -1,7 +1,5 @@
 const { MessageEmbed } = require("discord.js");
 const Discord = require('discord.js');
-const newUsers = new Discord.Collection();
-const ms = require("ms");
 const { createCanvas, loadImage, registerFont } = require('canvas');
 registerFont(__dirname + '/Uni Sans Heavy.otf', { family: 'Uni Sans Heavy', weight: 'normal' });
 
@@ -64,28 +62,6 @@ module.exports = async (client, member) => {
   );
 
   channel.send(attachment);
-
-  const defaultChannel = client.channels.cache.get('639112437286567937');
-
-  let JoinTime = '5m';
-  newUsers.set(member.id, member.user);
-
-  setInterval(() => {
-    const userlist = newUsers.map(u => u.toString()).join(", ");
-      let embed1 = new MessageEmbed()
-        .setTitle(`Bienvenue dans ${member.guild.name}`)
-        .setColor('#F4AE42')
-        .setDescription(`<a:Welcome1:735208586245832785><a:Welcome2:735208578092236942> Hey, je vous ai envoyé un MP contenant ce dont vous avez besoin pour intégrer la meute ! <a:SenkoWelcome:735208674695577660>`)
-        .setThumbnail(member.user.displayAvatarURL({ format: 'png', dynamic: true}))
-        .setFooter(`Nombre de membres : ${member.guild.memberCount}`);
-    newUsers.clear();
-
-    if(userlist) {
-      defaultChannel.send(`${userlist}`, embed1);
-    } else {
-      return;
-    }
-  }, ms(JoinTime));
 
   let embed2 = new MessageEmbed()
     .setAuthor(`${member.user.username} (${member.id})`, member.user.displayAvatarURL({ format: 'png', dynamic: true}))
