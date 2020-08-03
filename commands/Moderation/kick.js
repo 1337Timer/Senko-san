@@ -8,7 +8,7 @@ module.exports.run = async (client, message, args) => {
 
     const embed = new MessageEmbed()
         .setAuthor(`${user.username} (${user.id})`)
-        .setColor("#FFC621")
+        .setColor("#D29E00")
         .setDescription(`<:IconJoin:735207925370454066> **Action**: Kick\n<:ItemMagnifyingGlass:735207739587952682> **Raison**: ${reason}`)
         .setThumbnail(user.avatarURL())
         .setTimestamp()

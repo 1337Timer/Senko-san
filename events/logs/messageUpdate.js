@@ -7,7 +7,7 @@ module.exports = async (client, message) => {
         
     const embed = new MessageEmbed()
     .setTitle(`Message édité dans ${message.channel.name}`)
-    .setColor("#DD5F53")
+    .setColor("#D29E00")
     .setDescription(`<:IconJoin:735207925370454066> **Message** :\n ${message.content}\n**<:Membres:735207906420588645> Auteur du message** : \n${message.author}`)
     .setTimestamp()
 
