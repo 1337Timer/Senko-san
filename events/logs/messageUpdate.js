@@ -6,7 +6,7 @@ module.exports = async (client, message) => {
         if(message.author.bot) return;
         
     const embed = new MessageEmbed()
-    .setAuthor(`Message édité dans ${message.channel}`)
+    .setDescription(`Message édité dans ${message.channel}`)
     .setColor("#DD5F53")
     .setDescription(`<:IconJoin:735207925370454066> **Message** :\n ${message.content}\n**<:Membres:735207906420588645> Auteur du message** : \n${message.author}`)
     .setTimestamp()
