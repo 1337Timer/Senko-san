@@ -1,4 +1,4 @@
-<p align="center"><img height="150" width="150" class="center" src="https://nyria-off.000webhostapp.com/css/images/senko.jpg"></p>
+<p align="center"><img height="150" width="150" class="center" src="https://cdn.discordapp.com/avatars/712373511406223381/d566250c5f85d9103bcee9175b5c5032.png"></p>
 
 # Senko-san
 Un bot développé pour le <a href="https://discord.gg/MyG9Pxx">Discord</a> de la Meute G9
