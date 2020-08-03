@@ -2,12 +2,9 @@ const { MessageEmbed } = require('discord.js');
 
 module.exports = async (client, message) => {
     const server = message.guild.id;
-    const fetchGuildAuditLogs = await message.guild.fetchAuditLogs({
-        limit: 1,
-        type: 'MESSAGE_DELETE'
-    });
     
     if (server == "527568704666599444") {
+        if(message.author.bot) return;
         
     const embed = new MessageEmbed()
     .setAuthor("Message supprimé")
