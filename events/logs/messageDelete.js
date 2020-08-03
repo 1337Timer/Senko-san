@@ -6,7 +6,9 @@ module.exports = async (client, message) => {
         limit: 1,
         type: 'MESSAGE_DELETE'
     });
+
     const latestMessageDeleted = fetchGuildAuditLogs.entries.first();
+    console.log(latestMessageDeleted);
     const { executor } = latestMessageDeleted;
 
     //if (server) {
@@ -14,7 +16,8 @@ module.exports = async (client, message) => {
     const embed = new MessageEmbed()
     .setAuthor("Message supprimé")
     .setColor("#DD5F53")
-    .setDescription(`<:IconJoin:735207925370454066> **Message** :\n ${message.content}\n**<:Membres:735207906420588645> Auteur du message** : ${message.author}`)
+    .setDescription(`<:IconJoin:735207925370454066> **Message** :\n ${message.content}\n**<:Membres:735207906420588645> Auteur du message** : \n${message.author}`)
+    .setTimestamp()
     .setFooter(executor.username, executor.displayAvatarURL({ format: 'png', dynamic: true}));
 
     client.channels.cache.get('699458377381838878').send(embed);
