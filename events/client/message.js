@@ -11,7 +11,7 @@ module.exports = async (client, message) => {
   const command = client.commands.get(commandName) || client.commands.find(cmd => cmd.help.aliases && cmd.help.aliases.includes(commandName));
   if (!command) return;
 
-  if(command.help.permissions && !message.member.hasPermission('BAN_MEMBERS')) return message.reply("<:SenkoThinking:732192434137727057> Tu ne possède pas les permissions nécessaires pour éxecuter cette commande.");
+  if(command.help.permissions && !message.member.hasPermission('BAN_MEMBERS')) return message.reply("<:SenkoThinking:735210310138331229> Tu ne possède pas les permissions nécessaires pour éxecuter cette commande.");
 
   if (command.help.args && !args.length) {
       let noArgsReply = `<:SenkoThinking:735210310138331229> Cette commande nécessite des arguments !`;
