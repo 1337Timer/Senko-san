@@ -5,7 +5,7 @@ registerFont(__dirname + '/Uni Sans Heavy.otf', { family: 'Uni Sans Heavy', weig
 
 module.exports = async (client, member) => {
   
-  const channel = client.channels.cache.get('679052698150240257');
+  const channel = client.channels.cache.get('679052698150240257'); // Message dans 🥳・𝕭ienvenue
   const canvas = createCanvas(1024, 450);
   const ctx = canvas.getContext("2d");
 
@@ -63,7 +63,35 @@ module.exports = async (client, member) => {
 
   channel.send(attachment);
 
-  let embed2 = new MessageEmbed()
+  const defaultChannel = client.channels.cache.get('639112437286567937'); // Message dans 💬・𝗗iscussion 
+
+  let JoinTime = '5s';
+  newUsers.set(member.id, member.user);
+
+  setInterval(() => {
+    const userlist = newUsers.map(u => u.toString()).join(", ");
+      let embed1 = new MessageEmbed()
+        .addField(`<:x9umihHello:741643954189238362> Bienvenue dans ${member.guild.name}`, `Un nouveau membre a rejoint la meute ! \n \n Donnez-lui un accueil chaleureux <a:catpat:735208106627170324>`)
+        .setColor('#F4AE42')
+        .setThumbnail(member.user.displayAvatarURL({ format: 'png', dynamic: true}))
+        .setFooter(`Nombre de membres : ${member.guild.memberCount}`);
+      
+      let embed2 = new MessageEmbed()
+      .addField(`<:x9umihHello:741643954189238362> Bienvenue dans ${member.guild.name}`, `<a:SenkoExcited:735207473031413872> Plusieurs membres ont rejoint la meute ! \n \n Donnez-leur un accueil chaleureux <a:catpat:735208106627170324>`)
+      .setColor('#F4AE42')
+      .setThumbnail(member.user.displayAvatarURL({ format: 'png', dynamic: true}))
+      .setFooter(`Nombre de membres : ${member.guild.memberCount}`);
+
+    if(userlist.length == 21) {
+      defaultChannel.send(`${userlist}`, embed1);
+      newUsers.clear();
+    } if(userlist.length > 21) {
+      defaultChannel.send(`${userlist}`, embed2);
+      newUsers.clear();
+    }
+  }, ms(JoinTime));
+
+  let embed2 = new MessageEmbed() // Message dans ✈・𝗟ogs-serveur
     .setAuthor(`${member.user.username} (${member.id})`, member.user.displayAvatarURL({ format: 'png', dynamic: true}))
     .setColor('#2ECC71')
     .setFooter("Un utilisateur a rejoint")
@@ -71,7 +99,7 @@ module.exports = async (client, member) => {
     
     client.channels.cache.get('699450511400763423').send(embed2);
     
-    let embed3 = new MessageEmbed()
+    let embed3 = new MessageEmbed() // Message en MP
     .setTitle(`Bienvenue dans ${member.guild.name}`)
     .setColor('#F4AE42')
     .setDescription(`<a:Welcome1:735208586245832785><a:Welcome2:735208578092236942> Bienvenue à toi sur le serveur ! Regarde bien les règles pour éviter de futures sanctions. \n \n **Pour accéder au serveur, clique sur la réaction <a:check:735208031817695284> en dessous des règles.**`)
