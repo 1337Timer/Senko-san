@@ -1,5 +1,7 @@
 const { MessageEmbed } = require("discord.js");
 const Discord = require('discord.js');
+const newUsers = new Discord.Collection();
+const ms = require("ms");
 const { createCanvas, loadImage, registerFont } = require('canvas');
 registerFont(__dirname + '/Uni Sans Heavy.otf', { family: 'Uni Sans Heavy', weight: 'normal' });
 
