@@ -73,13 +73,15 @@ module.exports = async (client, member) => {
   setInterval(() => {
     const userlist = newUsers.map(u => u.toString()).join(", ");
       let embed1 = new MessageEmbed()
-        .addField(`<:x9umihHello:741643954189238362> Bienvenue dans ${member.guild.name}`, `Un nouveau membre a rejoint la meute ! \n \n Donnez-lui un accueil chaleureux <a:catpat:735208106627170324>`)
+        .setTitle(`Bienvenue dans ${member.guild.name}`)
+        .addField(`<:x9umihHello:741643954189238362> Un nouveau membre a rejoint la meute !`, `Donnez-lui un accueil chaleureux <a:catpat:735208106627170324>`)
         .setColor('#F4AE42')
         .setThumbnail(member.user.displayAvatarURL({ format: 'png', dynamic: true}))
         .setFooter(`Nombre de membres : ${member.guild.memberCount}`);
       
       let embed2 = new MessageEmbed()
-      .addField(`<:x9umihHello:741643954189238362> Bienvenue dans ${member.guild.name}`, `<a:SenkoExcited:735207473031413872> Plusieurs membres ont rejoint la meute ! \n \n Donnez-leur un accueil chaleureux <a:catpat:735208106627170324>`)
+      .setTitle(`Bienvenue dans ${member.guild.name}`)
+      .addField(`<a:SenkoExcited:735207473031413872> Plusieurs membres ont rejoint la meute !`, `Donnez-leur un accueil chaleureux <a:catpat:735208106627170324>`)
       .setColor('#F4AE42')
       .setThumbnail(member.user.displayAvatarURL({ format: 'png', dynamic: true}))
       .setFooter(`Nombre de membres : ${member.guild.memberCount}`);
