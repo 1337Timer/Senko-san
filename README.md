@@ -15,6 +15,5 @@ Faites s!help pour voir toutes les commandes disponibles et leur utilisation.
 <li>👋 Accueille les nouveaux membres sur le serveur avec un Canvas, un Embed et en MP.
 <li>⚙️ Possède différentes commandes de modération/fun/utilitaire.
 <li>🔰 Possède une fonction "Reaction Role".
-<li>🥰 Qu'est-ce-qu'elle est choux quand-même :3
-<li>🥳 De nouvelles features arriveront au fur et à mesure.
+<li>👀 Et quelques autres sympathique features.
 </ul>
