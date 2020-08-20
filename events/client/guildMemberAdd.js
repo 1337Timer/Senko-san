@@ -7,9 +7,9 @@ registerFont(__dirname + '/Uni Sans Heavy.otf', { family: 'Uni Sans Heavy', weig
 
 module.exports = async (client, member) => {
   
-  const channel = client.channels.cache.get('679052698150240257'); // Message dans 🥳・𝕭ienvenue
   const canvas = createCanvas(1024, 450);
   const ctx = canvas.getContext("2d");
+  const guild = member.guild;
 
   const background = await loadImage("./image.jpg");
   ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
@@ -62,10 +62,12 @@ module.exports = async (client, member) => {
   canvas.toBuffer(),
   "welcome-image.png"
   );
+  
+  if (guild.id == "527568704666599444") {
+    client.channels.cache.get('679052698150240257').send(attachment);// Message dans 🥳・𝕭ienvenue
+  }
 
-  channel.send(attachment);
-
-  const defaultChannel = client.channels.cache.get('639112437286567937'); // Message dans 💬・𝗗iscussion 
+  const defaultChannel = client.channels.cache.get('709599127012638770');
 
   let JoinTime = '5s';
   newUsers.set(member.id, member.user);
@@ -86,12 +88,16 @@ module.exports = async (client, member) => {
       .setThumbnail(member.user.displayAvatarURL({ format: 'png', dynamic: true}))
       .setFooter(`Nombre de membres : ${member.guild.memberCount}`);
 
-    if(userlist.length == 21) {
-      defaultChannel.send(`${userlist}`, embed1);
-      newUsers.clear();
-    } if(userlist.length > 21) {
-      defaultChannel.send(`${userlist}`, embed2);
-      newUsers.clear();
+    if (userlist.length == 21) {
+      if (guild.id == "639112437286567937") { // Message dans 💬・𝗗iscussion 
+        defaultChannel.send(`${userlist}`, embed1); 
+        newUsers.clear();
+      }
+    } if (userlist.length > 21) {
+      if (guild.id == "639112437286567937") { // Message dans 💬・𝗗iscussion 
+        defaultChannel.send(`${userlist}`, embed2); 
+        newUsers.clear();
+      }
     }
   }, ms(JoinTime));
 
@@ -100,8 +106,10 @@ module.exports = async (client, member) => {
     .setColor('#2ECC71')
     .setFooter("Un utilisateur a rejoint")
     .setTimestamp();
-    
-    client.channels.cache.get('699450511400763423').send(embed2);
+
+    if (guild.id == "527568704666599444") {
+      client.channels.cache.get('699450511400763423').send(embed2);
+    }
     
     let embed3 = new MessageEmbed() // Message en MP
     .setTitle(`Bienvenue dans ${member.guild.name}`)
@@ -109,8 +117,9 @@ module.exports = async (client, member) => {
     .setDescription(`<a:Welcome1:735208586245832785><a:Welcome2:735208578092236942> Bienvenue à toi sur le serveur ! Regarde bien les règles pour éviter de futures sanctions. \n \n **Pour accéder au serveur, clique sur la réaction <a:check:735208031817695284> en dessous des règles.**`)
     .setImage('https://i.ibb.co/h8Q9Nrp/19f3e47f-0794-4cc8-8d7d-eae48a850419-profile-banner-480.png')
     
-    member.createDM().then(function(channel) {
-        return channel.send(embed3)
-    });
-  
+    if (guild.id == "527568704666599444") {
+      member.createDM().then(function(channel) {
+          return channel.send(embed3)
+      });
+  }
 }
