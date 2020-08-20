@@ -1,4 +1,4 @@
-<p align="center"><img height="150" width="150" class="center" src="https://cdn.discordapp.com/avatars/712373511406223381/d566250c5f85d9103bcee9175b5c5032.png"></p>
+<p align="center"><img height="150" width="150" class="center" src="https://cdn.discordapp.com/avatars/712373511406223381/efa0eb6e9376a1e7d0698939d9fd2682.png"></p>
 
 # Senko-san
 Le code de ce bot est public, si vous avez besoin de quelque chose, libre à vous de vous servir. 
