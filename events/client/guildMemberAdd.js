@@ -89,12 +89,12 @@ module.exports = async (client, member) => {
       .setFooter(`Nombre de membres : ${member.guild.memberCount}`);
 
     if (userlist.length == 21) {
-      if (guild.id == "639112437286567937") { // Message dans 💬・𝗗iscussion 
+      if (guild.id == "527568704666599444") { // Message dans 💬・𝗗iscussion 
         defaultChannel.send(`${userlist}`, embed1); 
         newUsers.clear();
       }
     } if (userlist.length > 21) {
-      if (guild.id == "639112437286567937") { // Message dans 💬・𝗗iscussion 
+      if (guild.id == "527568704666599444") { // Message dans 💬・𝗗iscussion 
         defaultChannel.send(`${userlist}`, embed2); 
         newUsers.clear();
       }
