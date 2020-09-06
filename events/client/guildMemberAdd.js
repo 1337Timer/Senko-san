@@ -67,35 +67,22 @@ module.exports = async (client, member) => {
     client.channels.cache.get('679052698150240257').send(attachment);// Message dans 🥳・𝕭ienvenue
   }
 
-  const defaultChannel = client.channels.cache.get('709599127012638770');
+  const defaultChannel = client.channels.cache.get('639112437286567937');
 
   let JoinTime = '5s';
   newUsers.set(member.id, member.user);
 
   setInterval(() => {
     const userlist = newUsers.map(u => u.toString()).join(", ");
-      let embed1 = new MessageEmbed()
-        .setTitle(`Bienvenue dans ${member.guild.name}`)
-        .addField(`<:x9umihHello:741643954189238362> Un nouveau membre a rejoint la meute !`, `Donnez-lui un accueil chaleureux <a:catpat:735208106627170324>`)
-        .setColor('#F4AE42')
-        .setThumbnail(member.user.displayAvatarURL({ format: 'png', dynamic: true}))
-        .setFooter(`Nombre de membres : ${member.guild.memberCount}`);
-      
-      let embed2 = new MessageEmbed()
-      .setTitle(`Bienvenue dans ${member.guild.name}`)
-      .addField(`<a:SenkoExcited:735207473031413872> Plusieurs membres ont rejoint la meute !`, `Donnez-leur un accueil chaleureux <a:catpat:735208106627170324>`)
-      .setColor('#F4AE42')
-      .setThumbnail(member.user.displayAvatarURL({ format: 'png', dynamic: true}))
-      .setFooter(`Nombre de membres : ${member.guild.memberCount}`);
 
     if (userlist.length == 21) {
       if (guild.id == "527568704666599444") { // Message dans 💬・𝗗iscussion 
-        defaultChannel.send(`${userlist}`, embed1); 
+        defaultChannel.send(`<:x9umihHello:741643954189238362> ${userlist} vient de rejoindre la meute !`); 
         newUsers.clear();
       }
     } if (userlist.length > 21) {
       if (guild.id == "527568704666599444") { // Message dans 💬・𝗗iscussion 
-        defaultChannel.send(`${userlist}`, embed2); 
+        defaultChannel.send(`<:x9umihHello:741643954189238362> ${userlist} viennent de rejoindre la meute !`); 
         newUsers.clear();
       }
     }
