@@ -10,9 +10,12 @@ loadEvents(client);
 
 client.on('message', message => {
 
-    if (message.content.toLowerCase() === 'bonjour' || message.content.toLowerCase() === 'hey' || message.content.toLowerCase() === 'salut' || message.content.toLowerCase() === 'hello') {
-        message.react('👋');
-    }
+    const message_lower = message.content.toLowerCase();
+    const greetings = ['bonjour', 'hey', 'salut', 'hello'];
+
+        if (greetings.includes(message_lower)) {
+            message.react('👋');
+        }
 
     if (message.content.toLowerCase() === 'bienvenue') {
         message.react('❤️');
