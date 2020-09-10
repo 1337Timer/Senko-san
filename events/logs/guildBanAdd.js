@@ -1,8 +1,6 @@
 const { MessageEmbed } = require('discord.js');
 
 module.exports = async (client, message) => {
-    
-    if(message.author.bot) return;
         
     const embed = new MessageEmbed()
           .setAuthor(`${user.username} (${user.id})`)
