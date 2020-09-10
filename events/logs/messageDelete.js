@@ -1,9 +1,7 @@
 const { MessageEmbed } = require('discord.js');
 
 module.exports = async (client, message) => {
-    const server = message.guild.id;
     
-    if (server == "527568704666599444") {
         if(message.author.bot) return;
         
     const embed = new MessageEmbed()
@@ -13,5 +11,4 @@ module.exports = async (client, message) => {
     .setTimestamp()
 
     client.channels.cache.get('699458377381838878').send(embed);
-    }
 }
