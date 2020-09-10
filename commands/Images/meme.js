@@ -3,7 +3,7 @@ const fetch = require("node-fetch")
 const { MESSAGES } = require("../../util/constants");
 
 module.exports.run = async (client, message, args) => {
-    const memes = await fetch('https://www.reddit.com/r/memes/top/.json?sort=top&t=day&limit=500')
+    const memes = await fetch('https://www.reddit.com/r/animemes/top/.json?sort=top&t=day&limit=500')
     .then(res => res.json())
     .then(json => json.data.children);
 
