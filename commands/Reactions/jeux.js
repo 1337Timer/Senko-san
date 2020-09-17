@@ -2,10 +2,14 @@ const { MessageEmbed } = require("discord.js");
 const { MESSAGES } = require("../../util/constants");
 
 module.exports.run = (client, message, args) => {
-    const r6Role = message.guild.roles.cache.get("729788722333352028");
-    const gtaRole = message.guild.roles.cache.get("729794048524550277");
-    const r6Emoji = message.guild.emojis.cache.get("731924620889817170");
-    const gtaEmoji = message.guild.emojis.cache.get("731924579802415195");
+    // Roles
+    const r6Role = message.guild.roles.cache.get("756251153335058444");
+    const AURole = message.guild.roles.cache.get("756251398072696943");
+    const CSRole = message.guild.roles.cache.get("756251290786332692");
+    // Emojis
+    const r6Emoji = message.guild.emojis.cache.get("🔫");
+    const AUEmoji = message.guild.emojis.cache.get("🤫");
+    const CSEmoji = message.guild.emojis.cache.get("💣");
 
     const embed = new MessageEmbed()
     .setTitle('Jeux')
@@ -15,13 +19,15 @@ module.exports.run = (client, message, args) => {
         "Rôles disponibles :",
         `
         ${r6Emoji} - ${r6Role.toString()}
-        ${gtaEmoji} - ${gtaRole.toString()}
+        ${AUEmoji} - ${AURole.toString()}
+        ${CSEmoji} - ${CSRole.toString()}
         `
     );
 
     message.channel.send(embed).then(async msg => {
         await msg.react(r6Emoji);
-        await msg.react(gtaEmoji);
+        await msg.react(AUEmoji);
+        await msg.react(CSEmoji);
         await msg.delete({ timeout: 15000 })
     })
 
