@@ -1,15 +1,15 @@
 const { MessageEmbed } = require("discord.js");
 const { MESSAGES } = require("../../util/constants");
 
-module.exports.run = (client, message, args) => {
+module.exports.run = (message) => {
     // Roles
     const r6Role = message.guild.roles.cache.get("756251153335058444");
     const AURole = message.guild.roles.cache.get("756251398072696943");
     const CSRole = message.guild.roles.cache.get("756251290786332692");
     // Emojis
-    const r6Emoji = message.guild.emojis.cache.get("🔫");
-    const AUEmoji = message.guild.emojis.cache.get("🤫");
-    const CSEmoji = message.guild.emojis.cache.get("💣");
+    const r6Emoji = message.guild.emojis.cache.get("756253759746736270");
+    const AUEmoji = message.guild.emojis.cache.get("756255022278508615");
+    const CSEmoji = message.guild.emojis.cache.get("756255086061289575");
 
     const embed = new MessageEmbed()
     .setTitle('Jeux')
