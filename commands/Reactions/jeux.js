@@ -1,7 +1,7 @@
 const { MessageEmbed } = require("discord.js");
 const { MESSAGES } = require("../../util/constants");
 
-module.exports.run = (message) => {
+module.exports.run = (client, message, args) => {
     // Roles
     const r6Role = message.guild.roles.cache.get("756251153335058444");
     const AURole = message.guild.roles.cache.get("756251398072696943");
